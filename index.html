@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT SERVICES & CREATIVE — Agence de communication | Lomé</title>
+<meta name="description" content="Agence de communication IT SERVICES & CREATIVE à Lomé, créative et innovante, offrant services informatiques, créatifs et développement web.">
+<meta property="og:title" content="IT SERVICES & CREATIVE">
+<meta property="og:description" content="Boostez votre visibilité avec IT SERVICES & CREATIVE, votre agence créative à Lomé.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font:"Poppins",sans-serif;
+  --accent:#ff6600;
+  --accent-dark:#e65c00;
+  --bg:#ffffff;
+  --text:#111111;
+}
+[data-theme="dark"]{
+  --bg:#111111;
+  --text:#f0f0f0;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:var(--font);}
+body{background:var(--bg);color:var(--text);line-height:1.6;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:68px;background:transparent;
+  transition:all .4s cubic-bezier(.4,0,.2,1);
+}
+nav.scrolled{
+  background:rgba(10,10,20,.95);backdrop-filter:blur(20px);
+  box-shadow:0 4px 30px rgba(0,0,0,.3);height:58px;
+}
+nav .nav-logo img{height:44px;object-fit:contain;}
+nav .nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0;}
+nav .nav-links a{
+  color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;font-size:.9rem;
+  position:relative;padding-bottom:4px;transition:color .2s;
+}
+nav .nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
+  background:var(--accent);transition:width .3s ease;
+}
+nav .nav-links a:hover::after,
+nav .nav-links a.active::after{width:100%;}
+nav .nav-links a:hover,
+nav .nav-links a.active{color:#fff;}
+nav .nav-cta{
+  padding:.55rem 1.4rem;border-radius:50px;background:var(--accent);
+  color:#fff;font-weight:700;text-decoration:none;font-size:.88rem;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);transition:all .3s ease;
+}
+nav .nav-cta:hover{transform:translateY(-2px);filter:brightness(1.1);}
+nav .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+nav .burger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s ease;}
+nav .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+nav .burger.open span:nth-child(2){opacity:0;}
+nav .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:768px){
+  .nav-links-wrap{display:none;}
+  .burger{display:flex;}
+  nav.mobile-open .nav-links-wrap{
+    display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+    background:rgba(10,10,20,.97);backdrop-filter:blur(20px);
+    padding:1rem 0;border-top:1px solid rgba(255,255,255,.1);
+  }
+  nav.mobile-open .nav-links{flex-direction:column;gap:0;}
+  nav.mobile-open .nav-links a{padding:.9rem 2rem;border-bottom:1px solid rgba(255,255,255,.05);}
+  nav.mobile-open .nav-cta{margin:1rem 2rem;display:block;text-align:center;}
+}
+
+/* HERO */
+#hero{position:relative;height:100vh;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 1s;opacity:0;}
+.hero-bg.active{opacity:1;}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.48);z-index:1;}
+.hero-content{
+  position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:2rem 5%;padding-top:68px;
+}
+.hero-content img{height:90px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:1.5rem;}
+.hero-content h1{
+  color:#fff;font-size:clamp(2.5rem,6vw,5rem);font-weight:800;
+  text-shadow:0 3px 12px rgba(0,0,0,.5);margin-bottom:1rem;line-height:1.1;
+}
+.hero-content p{
+  color:rgba(255,255,255,.9);font-size:clamp(1rem,2.5vw,1.5rem);
+  max-width:600px;margin-bottom:2.5rem;line-height:1.6;
+}
+.hero-content .cta-group a{
+  padding:1rem 2.5rem;border-radius:50px;text-decoration:none;font-weight:700;
+  transition:all .3s;
+}
+.hero-content .cta-group a:first-child{background:var(--accent);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.3);}
+.hero-content .cta-group a:last-child{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);}
+.hero-dots{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
+.hero-prev,.hero-next{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;
+  width:44px;height:44px;border-radius:50%;cursor:pointer;backdrop-filter:blur(4px);
+}
+.hero-prev{left:1.5rem;}
+.hero-next{right:1.5rem;}
+
+/* PARALLAX */
+.parallax{
+  position:relative;background-size:cover;background-position:center;background-attachment:fixed;
+  min-height:600px;display:flex;align-items:center;justify-content:center;
+}
+.parallax::after{
+  content:'';position:absolute;inset:0;background:rgba(0,0,0,.45);
+}
+.parallax .parallax-content{
+  position:relative;z-index:1;color:#fff;text-align:center;padding:2rem;max-width:800px;
+}
+
+/* ABOUT (technique B) */
+#about{
+  display:grid;grid-template-columns:1fr 1fr;min-height:500px;
+}
+#about .about-img{
+  position:relative;overflow:hidden;
+}
+#about .about-img img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+#about .about-text{
+  padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;
+}
+
+/* SERVICES */
+#services{
+  position:relative;padding:6rem 5%;
+  background-image:url('images/services/services-bg.jpg');background-size:cover;background-position:center;
+}
+#services::before{
+  content:'';position:absolute;inset:0;background:rgba(0,0,0,.75);
+}
+#services .inner{
+  position:relative;z-index:1;max-width:960px;margin:0 auto;color:#fff;text-align:center;
+}
+#services h2{margin-bottom:.5rem;font-size:2rem;}
+#services p{margin-bottom:3rem;color:rgba(255,255,255,.65);}
+.acc-item{margin-bottom:1rem;border-radius:12px;overflow:hidden;}
+.acc-btn{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:1.3rem 1.6rem;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.18);color:#fff;font-size:1rem;font-weight:700;
+  cursor:pointer;border-radius:12px;text-align:left;transition:background .3s;
+}
+.acc-btn:hover{background:rgba(255,255,255,.18);}
+.acc-arrow{transition:transform .3s;}
+.acc-item.open .acc-arrow{transform:rotate(180deg);}
+.acc-panel{max-height:0;overflow:hidden;transition:max-height .5s ease;}
+.acc-item.open .acc-panel{max-height:2000px;}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;padding:1.2rem;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);border-top:none;border-radius:0 0 12px 12px;
+}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)!important;}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr!important;}}
+.svc-card{
+  background:#fff;border-radius:12px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.15);transition:transform .3s,box-shadow .3s;
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.2);}
+.svc-img-wrap{position:relative;height:200px;overflow:hidden;}
+.svc-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1s;
+}
+.svc-img.svc-active{opacity:1;}
+.svc-img:not(.svc-active){opacity:0;}
+.svc-price{
+  position:absolute;top:10px;right:10px;background:var(--accent);
+  color:#fff;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:700;
+}
+.svc-body{padding:1.2rem;}
+.svc-body h4{margin:0 0 .4rem;font-size:.95rem;color:#111;}
+.svc-body p{margin:0 0 .9rem;font-size:.83rem;color:#555;line-height:1.5;}
+.svc-btn{
+  display:inline-block;padding:.5rem 1.2rem;background:var(--accent);
+  color:#fff;border-radius:6px;text-decoration:none;font-size:.83rem;font-weight:600;
+}
+
+/* TEAM */
+#team{padding:6rem 5%;background:#f8f9ff;}
+#team .section-header{text-align:center;margin-bottom:3.5rem;}
+#team .section-header span{
+  font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);
+}
+#team .section-header h2{
+  font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#0f0f1a;margin-top:.5rem;
+}
+.team-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1000px;margin:0 auto;
+}
+.team-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,.07);transition:all .35s ease;
+}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.13);}
+.team-img-wrap{position:relative;height:260px;overflow:hidden;}
+.team-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s;}
+.team-card:hover .team-img-wrap img{transform:scale(1.05);}
+.team-overlay{
+  position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 55%);
+  opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:1.2rem;
+}
+.team-card:hover .team-overlay{opacity:1;}
+.team-overlay a{
+  color:#fff;font-size:.85rem;font-weight:600;text-decoration:none;padding:.5rem 1.2rem;
+  border:1px solid rgba(255,255,255,.5);border-radius:20px;
+}
+.team-info{padding:1.4rem 1.5rem;}
+.team-info h4{margin:0 0 .2rem;font-size:1rem;font-weight:800;color:#0f0f1a;}
+.team-role{
+  display:block;font-size:.78rem;font-weight:700;color:var(--accent);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:.6rem;
+}
+.team-info p{margin:0;font-size:.83rem;color:#6b7280;line-height:1.6;}
+@media(max-width:768px){.team-grid{grid-template-columns:repeat(2,1fr)!important;}}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr!important;}}
+
+/* TESTIMONIALS */
+#testimonials{
+  position:relative;background-image:url('images/temoignages/temoignages.jpg');
+  background-size:cover;background-position:center;
+}
+#testimonials::before{
+  content:'';position:absolute;inset:0;background:rgba(0,0,0,.55);
+}
+#testimonials .testi-content{
+  position:relative;z-index:1;color:#fff;padding:6rem 5%;max-width:800px;margin:0 auto;
+  text-align:center;
+}
+.testi-card{
+  background:rgba(255,255,255,.12);border-radius:12px;padding:2rem;
+  backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,.2);
+}
+.testi-card p{font-size:1.1rem;line-height:1.6;margin-bottom:1rem;}
+.testi-card .author{
+  font-weight:700;color:#fff;
+}
+
+/* FAQ (similar to accordion) */
+#faq{
+  padding:6rem 5%;background:#f4f5f9;
+}
+#faq .faq-inner{
+  max-width:960px;margin:0 auto;
+}
+.faq-item{margin-bottom:1rem;}
+.faq-question{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.07);padding:.8rem 1.2rem;border-radius:8px;
+  cursor:pointer;font-weight:600;transition:background .3s;
+}
+.faq-question:hover{background:rgba(0,0,0,.12);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 1.2rem;}
+.faq-item.open .faq-answer{max-height:400px;padding-top:.8rem;}
+.faq-arrow{transition:transform .3s;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+
+/* CONTACT */
+#contact{
+  position:relative;min-height:650px;
+  background-image:url('images/contact/contact.jpg');background-size:cover;background-position:center;background-attachment:fixed;
+}
+#contact::before{
+  content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,5,20,.88),rgba(5,5,20,.65));
+}
+#contact .contact-inner{
+  position:relative;z-index:1;padding:6rem 5%;max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;
+}
+#contact .info{
+  color:#fff;padding-top:1rem;
+}
+#contact .info span{
+  font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:1rem;
+}
+#contact .info h2{
+  font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem;
+}
+#contact .info p{
+  color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:2rem;
+}
+.contact-block{
+  display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;
+}
+.contact-block a{
+  color:#fff;text-decoration:none;font-weight:600;
+}
+.contact-form{
+  background:#fff;border-radius:24px;padding:3rem;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;overflow:hidden;
+}
+.contact-form::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-dark));
+}
+.contact-form h3{
+  font-size:1.3rem;font-weight:800;color:#0f0f1a;margin:.5rem 0 .3rem;
+}
+.contact-form p{
+  font-size:.82rem;color:#9ca3af;margin-bottom:2rem;
+}
+.field-wrap{display:flex;flex-direction:column;gap:0;}
+.field-label{
+  font-size:.8rem;font-weight:700;color:#374151;margin-bottom:.4rem;letter-spacing:.3px;
+}
+.field-input{
+  padding:.85rem 1.1rem;border:2px solid #f0f0f5;border-radius:12px;
+  font-size:.92rem;color:#111827;background:#fafafe;transition:all .25s;
+  outline:none;width:100%;box-sizing:border-box;
+}
+.field-input:focus{
+  border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(108,99,255,.1);
+}
+.field-input.invalid{border-color:#ef4444;background:#fff5f5;}
+.field-err{display:none;color:#ef4444;font-size:.75rem;margin-top:4px;}
+.submit-btn{
+  padding:1.1rem;border:none;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;font-size:1.05rem;font-weight:800;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  box-shadow:0 6px 24px rgba(108,99,255,.4);transition:all .3s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
+}
+.submit-btn .btn-shine{
+  position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
+  transform:translateX(-100%);transition:transform .5s;
+}
+.submit-btn:hover:not(:disabled) .btn-shine{transform:translateX(100%);}
+.submit-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 32px rgba(108,99,255,.5);}
+.submit-btn:disabled{opacity:.7;cursor:not-allowed;transform:none;}
+#contactSuccess{
+  display:none;text-align:center;padding:3rem 1rem;
+}
+#contactSuccess div{
+  width:70px;height:70px;background:linear-gradient(135deg,#d1fae5,#a7f3d0);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:2rem;
+}
+#contactSuccess h4{
+  font-size:1.2rem;font-weight:800;color:#065f46;margin-bottom:.5rem;
+}
+#contactSuccess p{
+  color:#047857;font-size:.9rem;line-height:1.7;
+}
+#rate-msg{
+  display:none;text-align:center;font-size:.82rem;color:#9ca3af;margin-top:.5rem;
+}
+
+/* GALLERY */
+#gallery{
+  padding:6rem 5%;background:#111;
+}
+#gallery h2{
+  color:#fff;text-align:center;margin-bottom:3rem;
+}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1000px;margin:0 auto;
+}
+.gal-item{
+  position:relative;overflow:hidden;cursor:pointer;border-radius:8px;
+}
+.gal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .5s;}
+.gal-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,0);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s;font-size:2rem;color:#fff;opacity:0;
+}
+.gal-item:hover .gal-overlay{background:rgba(0,0,0,.55);opacity:1;}
+.gal-item:hover img{transform:scale(1.07);}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)!important;}}
+@media(max-width:480px){.gallery-grid{grid-template-columns:1fr!important;}}
+
+/* LIGHTBOX */
+#lightbox{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);
+  z-index:9999;align-items:center;justify-content:center;
+}
+#lightbox img{
+  max-width:90vw;max-height:85vh;border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+  background:#0a0a0a;color:#ccc;padding:2rem 5%;text-align:center;
+}
+footer a{color:#fff;text-decoration:none;}
+footer .social a{margin:0 .5rem;}
+
+/* DARK/LIGHT MODE */
+.toggle-theme{
+  cursor:pointer;background:none;border:none;color:#fff;font-size:1.2rem;
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><img src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'"></div>
+  <div class="nav-links-wrap">
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#team">Équipe</a></li>
+      <li><a href="#testimonials">Témoignages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Demandez un devis</a>
+  </div>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="toggle-theme" title="Basculer thème">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg active" style="background-image:url('images/hero/hero-1.jpg');"></div>
+  <div class="hero-bg" style="background-image:url('images/hero/hero-2.jpg');"></div>
+  <div class="hero-bg" style="background-image:url('images/hero/hero-3.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'">
+    <h1>IT SERVICES & CREATIVE</h1>
+    <p> Transformer les idées en résultas conncrets.</p>
+    <div class="cta-group">
+      <a href="#services">Découvrir</a>
+      <a href="#contact">Nous contacter</a>
+    </div>
+  </div>
+  <div class="hero-dots"></div>
+  <button class="hero-prev">&#8249;</button>
+  <button class="hero-next">&#8250;</button>
+</section>
+
+<!-- À PROPOS -->
+<section id="about">
+  <div class="about-img"><img src="images/apropos/apropos.jpg" alt="Notre histoire"></div>
+  <div class="about-text">
+    <h2 style="color:#111;font-size:2rem;margin-bottom:.5rem;">A Propos</h2>
+    <p style="color:#333;font-size:1rem;line-height:1.6;">
+ IT Services & Creative est une agence innovante alliant expertise en informatique et services créatifs.
+ Nous offrons des solutions personnalisées adaptées à chaque besoin, 
+qu'il s'agisse de services technologiques ou de créations sur mesure.
+ Notre mission est de transformer les idées de nos clients en expériences mémorables.
+    </p>
+    <p style="color:#333;font-size:1rem;line-height:1.6;">
+      Aujourd’hui, nous travaillons avec des entreprises locales et internationales, en leur offrant un service sur‑mesure qui reflète leurs valeurs et leurs ambitions.
+    </p>
+  </div>
+</section>
+
+<!-- PARALLAX SÉPARATRICE 1 -->
+<section class="parallax" style="background-image:url('images/parallax/parallax-1.jpg');">
+  <div class="parallax-content"><h2 style="font-size:2.5rem;">Créativité sans limites</h2></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="inner">
+    <h2>Nos Services</h2>
+    <p>Cliquez sur une catégorie pour voir les détails</p>
+    <div class="accordion">
+
+      <!-- ═══ DÉVELOPPEMENT WEB & APPLICATION ═══ -->
+      <div class="acc-item">
+        <button class="acc-btn" onclick="toggleAcc(this)">
+          <span><span style="font-size:1.4rem;margin-right:.7rem;">💻</span>Développement web &amp; Application</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-panel">
+          <div class="svc-grid">
+
+            <!-- Carte 1 : Site Vitrine -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/services-informatiqu-1.jpg" class="svc-img svc-active" alt="Site Vitrine">
+                <img src="images/services/services-informatiqu-2.jpg" class="svc-img" alt="Site Vitrine">
+                <span class="svc-price">À partir de 115 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>🌐 Site Vitrine</h4>
+                <p style="color:#333;text-align:left;">Présentez votre entreprise sur Internet avec élégance.<br>
+                  ✔️ Présentation de votre activité<br>
+                  ✔️ Galerie photos<br>
+                  ✔️ Formulaire de contact<br>
+                  ✔️ Intégration WhatsApp<br>
+                  ✔️ Version mobile responsive<br>
+                  <em>Idéal pour : commerçants, artisans, PME.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 2 : Site de Réservation -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/re.jpg" class="svc-img svc-active" alt="Site de Réservation">
+                <img src="images/services/reservation.jpg" class="svc-img" alt="Site de Réservation">
+                <span class="svc-price">À partir de 250 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>📅 Site de Réservation</h4>
+                <p style="color:#333;text-align:left;">Permettez à vos clients de prendre rendez-vous en ligne 24h/24.<br>
+                  ✅ Calendrier de réservation<br>
+                  ✅ Gestion des disponibilités<br>
+                  ✅ Notifications automatiques<br>
+                  ✅ Tableau de bord admin<br>
+                  <em>Idéal pour : hôtels, cabinets médicaux, salons de beauté.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 3 : Site E-commerce -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/ecomerce11.jpg" class="svc-img svc-active" alt="E-commerce">
+                <img src="images/services/ecomerce.jpg" class="svc-img" alt="E-commerce">
+                <span class="svc-price">À partir de 350 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>🛒 Site E-commerce</h4>
+                <p style="color:#333;text-align:left;">Vendez vos produits en ligne avec une boutique professionnelle.<br>
+                  ✅ Catalogue produits<br>
+                  ✅ Panier &amp; paiement sécurisé<br>
+                  ✅ Gestion des commandes<br>
+                  ✅ Tableau de bord vendeur<br>
+                  <em>Idéal pour : boutiques, artisans, grossistes.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 4 : Application Mobile -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/app1.jpg" class="svc-img svc-active" alt="Application Mobile">
+                <img src="images/services/app2.jpg" class="svc-img" alt="Application Mobile">
+                <span class="svc-price">À partir de 500 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>📱 Application Mobile</h4>
+                <p style="color:#333;text-align:left;">Développement d'apps Android &amp; iOS sur mesure pour votre activité.<br>
+                  ✅ Interface intuitive<br>
+                  ✅ Notifications push<br>
+                  ✅ Mode hors-ligne<br>
+                  ✅ Publication sur les stores<br>
+                  <em>Idéal pour : startups, services clients, livreurs.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 5 :✍️ Blog Professionnel-->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/blog1.jpg" class="svc-img svc-active" alt="Logiciel de Gestion">
+                <img src="images/services/blog2.jpg" class="svc-img" alt="Logiciel de Gestion">
+                <span class="svc-price">À partir de 150 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>✍️ Blog Professionnel</h4>
+                <p style="color:#333;text-align:left;">Publiez des articles, actualités et contenus pour développer votre visibilité en ligne.<br>
+                  ✅ Gestion des articles<br>
+                  ✅ Catégories et tags <br>
+                  ✅ Moteur de recherche<br>
+                  ✅ Partage sur les réseaux sociaux <br>
+                  <em>Idéal pour :Médias, influenceurs, blogueurs, entreprises..</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 6 : Maintenance & Support -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/support.jpg" class="svc-img svc-active" alt="Maintenance">
+                <img src="images/services/support2.jpg" class="svc-img" alt="Maintenance">
+                <span class="svc-price">À partir de 25 000 FCFA/mois</span>
+              </div>
+              <div class="svc-body">
+                <h4>🔧 Maintenance &amp; Support</h4>
+                <p style="color:#333;text-align:left;">Gardez votre site ou application toujours opérationnel.<br>
+                  ✅ Mises à jour régulières<br>
+                  ✅ Sauvegardes automatiques<br>
+                  ✅ Correction de bugs<br>
+                  ✅ Support technique dédié<br>
+                  <em>Idéal pour : tout type de site ou application.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+          </div><!-- /.svc-grid -->
+        </div><!-- /.acc-panel -->
+      </div><!-- /.acc-item -->
+
+      <!-- ═══ SERVICES CRÉATIFS ═══ -->
+      <div class="acc-item">
+        <button class="acc-btn" onclick="toggleAcc(this)">
+          <span><span style="font-size:1.4rem;margin-right:.7rem;">🎨</span>Services Créatifs</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-panel">
+          <div class="svc-grid">
+
+            <!-- Carte 1 : Identité Visuelle -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/iv.jpg" class="svc-img svc-active" alt="Identité Visuelle">
+                <img src="images/services/iv2.jpg" class="svc-img" alt="Identité Visuelle">
+                <span class="svc-price">À partir de 80 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>🎯 Identité Visuelle</h4>
+                <p style="color:#333;text-align:left;">Créez une image de marque forte et cohérente pour votre entreprise.<br>
+                  ✅ Logo professionnel<br>
+                  ✅ Charte graphique complète<br>
+                  ✅ Cartes de visite<br>
+                  ✅ Fichiers sources livrés<br>
+                  <em>Idéal pour : toute entreprise cherchant à se démarquer.</em>
+                </p>
+                <br>
+                <br>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 2 : 🕐 Horloge Personnalisée
+ -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/hr1.jpg" class="svc-img svc-active" alt="Graphisme Print">
+                <img src="images/services/hr2.jpg" class="svc-img" alt="Graphisme Print">
+                <span class="svc-price">À partir de 15 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>🕐 Horloge Personnalisée</h4>
+                <p style="color:#333;text-align:left;">
+Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
+                  ✅ Photo et texte personnalisés selon vos souhaits<br>
+                  ✅ Idéale comme cadeau original et mémorable<br>
+                  ✅ Parfaite pour mariages, anniversaires <br>
+                  ✅ Disponible avec logo pour les entreprises<br>
+                  <em></em>
+                  <br>
+
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Carte 3 : Tableaux photos personnalisés  -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/tp1.jpg" class="svc-img svc-active" alt="Réseaux Sociaux">
+                <img src="images/services/tp22.jpg" class="svc-img" alt="Réseaux Sociaux">
+                <span class="svc-price">À partir de ...</span>
+              </div>
+              <div class="svc-body">
+                <h4>Tableaux photos personnalisés </h4>
+                <p style="color:#333;text-align:left;">Le prix varie selon le modèle et la dimension<br>
+                  ✅ Modèle simple : à partir de 6.000f<br>
+                  ✅ Modèle sparkle ✨à partir de 9.000f<br>
+                  ✅ Modèle effet miroir à partir de 9.000f<br>
+                  ✅ Cadre vitré à partir de 5.000f<br>
+                  ✅ Plexiglas (effet miroir) à partir de 10.000f<br>
+                  ✅ Modèle luxe à partir de 12.000f<br>
+                  <em></em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Cadre photo vitré -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/vitre1.jpg" class="svc-img svc-active" alt="Photo Vidéo">
+                <img src="images/services/vitre4.jpg" class="svc-img" alt="Photo Vidéo">
+                <span class="svc-price">À partir de 5000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>Cadre Photo Vitré</h4>
+                <p style="color:#333;text-align:left;">Conçu avec une vitre élégante, ce cadre met en valeur vos images, mais nécessite une manipulation délicate en raison de sa fragilité.<br>
+                  ✅ Parfait pour décorer un salon<br>
+                  ✅ une chambre<br>
+                  ✅ un bureau<br>
+                  <br>
+                  <em>Un souvenir raffiné à offrir ou à s'offrir
+</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Modele sparkle -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/sp.jpg" class="svc-img svc-active" alt="Campagne Pub">
+                <img src="images/services/tp2.jpg" class="svc-img" alt="Campagne Pub">
+                <span class="svc-price">À partir de 9 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>Modele Sparkle✨</h4>
+                <p style="color:#333;text-align:left;">Ce tableau scintille de manière captivante lorsqu’il est exposé à une source lumineuse, créant un effet magique et unique.<br>
+                  ✅ Incassable<br>
+                  ✅ Cadeau Unique<br>
+                  ✅ Moderne<br>
+                  <br>
+                  <em>Idéal pour : anniversaires , mariage.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+            <!-- Plexiglass -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="images/services/pl.jpg" class="svc-img svc-active" alt="Rédaction">
+                <img src="images/services/pl.jpg" class="svc-img" alt="Rédaction">
+                <span class="svc-price">À partir de 10 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>Plexiglass</h4>
+                <p style="color:#333;text-align:left;">Combine l'élégance de l'effet miroir avec la durabilité du plexiglas, offrant un rendu moderne et robuste..<br>
+                  ✅ Incassable<br>
+                  ✅ Cadeau Unique<br>
+                  ✅ Moderne<br>
+                  <br>
+                  <br>
+                  <em>Idéal pour : anniversaires , mariage.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
+
+          </div><!-- /.svc-grid -->
+        </div><!-- /.acc-panel -->
+      </div><!-- /.acc-item -->
+
+    </div><!-- /.accordion -->
+  </div>
+</section>
+
+<!-- PARALLAX SÉPARATRICE 2 -->
+<section class="parallax" style="background-image:url('images/para.jpg');">
+  <div class="parallax-content"><h2 style="font-size:2.5rem;">Innovation & Passion</h2></div>
+</section>
+
+<!-- GALERIE -->
+<section id="gallery">
+  <h2>Nos Réalisations</h2>
+  <div class="gallery-grid">
+    <div class="gal-item" data-src="images/galerie/vitrine.jpg">
+      <img src="images/galerie/vitrine.jpg" alt="Réalisation 1">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gal-item" data-src="images/galerie/blog.jpg">
+      <img src="images/galerie/blog.jpg" alt="Réalisation 2">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gal-item" data-src="images/galerie/r3.jpg">
+      <img src="images/galerie/r3.jpg" alt="Réalisation 3">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gal-item" data-src="images/galerie/r4.jpg">
+      <img src="images/galerie/r4.jpg" alt="Réalisation 4">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gal-item" data-src="images/galerie/r5.jpg">
+      <img src="images/galerie/r5.jpg" alt="Réalisation 5">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gal-item" data-src="images/galerie/r.jpg">
+      <img src="images/galerie/r6.jpg" alt="Réalisation 6">
+      <div class="gal-overlay"><span>🔍</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section id="team">
+  <div class="section-header">
+    <span>Notre Équipe</span>
+    <h2>Les personnes derrière IT SERVICES & CREATIVE</h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-img-wrap">
+        <img src="images/equipe/image2.jpg" alt="Kouadio Aïssata">
+        <div class="team-overlay"><a href="#contact">Contacter</a></div>
+      </div>
+      <div class="team-info">
+        <h4>Kouadio Aïssata</h4>
+        <span class="team-role">Directrice Créative</span>
+        <p>Passionnée par le design et la communication, elle orchestre la stratégie visuelle de chaque projet.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-img-wrap">
+        <img src="images/equipe/image.jpg" alt="Moussa Mensah">
+        <div class="team-overlay"><a href="#contact">Contacter</a></div>
+      </div>
+      <div class="team-info">
+        <h4>Moussa Mensah</h4>
+        <span class="team-role">Chef de projet digital</span>
+        <p>Expert en solutions informatiques, il supervise le développement web et les infrastructures cloud.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-img-wrap">
+        <img src="images/equipe/image3.jpg" alt="Aminata Tava">
+        <div class="team-overlay"><a href="#contact">Contacter</a></div>
+      </div>
+      <div class="team-info">
+        <h4>Aminata Tava</h4>
+        <span class="team-role">Responsable Marketing</span>
+        <p>Spécialiste du positionnement de marque, elle développe les campagnes publicitaires et les contenus engageants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="testimonials">
+  <div class="testi-content">
+    <div class="testi-card">
+      <p>« IT SERVICES & CREATIVE a transformé notre présence en ligne, nos clients nous remarquent davantage et notre chiffre d’affaires a augmenté de 30 % en six mois. Leurs équipes sont réactives, créatives et toujours à l’écoute. »</p>
+      <div class="author">— Samuel K., PDG de SolarTech</div>
+    </div>
+    <div class="testi-card" style="margin-top:2rem;">
+      <p>« L’agence a su capter l’essence de notre marque et créer des visuels qui reflètent parfaitement notre identité méditerranéenne. Un vrai partenariat gagnant‑gagnant. »</p>
+      <div class="author">— Fatou B., Fondatrice de Café Soleil</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <h2 style="text-align:center;margin-bottom:2rem;">Questions fréquentes</h2>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Quel est votre processus de création ?</span><span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer"><p>Nous commençons par un briefing détaillé, suivi d’une phase de recherche, de prototypage, puis de validation avant la livraison finale.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Offrez‑vous un support post‑livraison ?</span><span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer"><p>Oui, un support technique gratuit pendant 30 jours, puis un forfait de maintenance adapté à vos besoins.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Quels sont vos délais moyens ?</span><span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer"><p>Selon la complexité, nos projets s’étalent de 2 à 8 semaines, avec des jalons clairs à chaque étape.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <!-- Infos de contact -->
+    <div class="info">
+      <span>Contact</span>
+      <h2>Parlons de votre projet</h2>
+      <p>Remplissez le formulaire et nous vous répondrons sous 24 h ouvrées.</p>
+      <div class="contact-block">
+        <svg width="20" height="20" fill="#fff"><path d="M2 2h16v16H2z" fill="none"/><path d="M12 2v2h4v4h2V2zM8 2v2H4v4H2V2zM2 12v6h6v-2H4v-4H2zm12 0v4h-4v2h6v-6z"/></svg>
+        <a href="mailto:team.itsc.228@gmail.com">team.itsc.228@gmail.com</a>
+      </div>
+      <a href="https://wa.me/22891493493?text=Bonjour%20IT SERVICES & CREATIVE%2C%20je%20souhaite%20obtenir%20des%20informations."
+         target="_blank" rel="noopener noreferrer"
+         style="display:inline-flex;align-items:center;gap:0.8rem;padding:0.9rem 1.6rem;border-radius:12px;background:#25D366;color:white;text-decoration:none;font-weight:700;font-size:0.9rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all .3s;margin-top:0.5rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 0 00-3.48-8.413z"/></svg>
+        Nous contacter sur WhatsApp
+      </a>
+    </div>
+    <!-- Formulaire -->
+    <div class="contact-form" id="contactFormWrapper">
+      <form id="contactForm" novalidate>
+        <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+        <input type="hidden" name="csrf_token" value="CSRF_TOKEN_PLACEHOLDER">
+        <!-- NOM -->
+        <div class="field-wrap">
+          <label for="f-nom" class="field-label"><span style="color:var(--accent);">👤</span> Nom <span style="color:#ef4444;">*</span></label>
+          <input type="text" id="f-nom" name="nom" placeholder="Votre nom de famille" required maxlength="100" autocomplete="family-name" class="field-input">
+          <div id="err-nom" class="field-err">⚠ Veuillez entrer votre nom</div>
+        </div>
+        <!-- PRÉNOM -->
+        <div class="field-wrap">
+          <label for="f-prenom" class="field-label"><span style="color:var(--accent);">👤</span> Prénom <span style="color:#ef4444;">*</span></label>
+          <input type="text" id="f-prenom" name="prenom" placeholder="Votre prénom" required maxlength="100" autocomplete="given-name" class="field-input">
+          <div id="err-prenom" class="field-err">⚠ Veuillez entrer votre prénom</div>
+        </div>
+        <!-- ADRESSE MAIL -->
+        <div class="field-wrap">
+          <label for="f-email" class="field-label"><span style="color:var(--accent);">✉️</span> Adresse mail <span style="color:#ef4444;">*</span></label>
+          <input type="email" id="f-email" name="email" placeholder="votre@email.com" required maxlength="200" autocomplete="email" class="field-input">
+          <div id="err-email" class="field-err">⚠ Adresse email invalide</div>
+        </div>
+        <!-- MESSAGE -->
+        <div class="field-wrap">
+          <label for="f-message" class="field-label" style="display:flex;justify-content:space-between;">
+            <span><span style="color:var(--accent);">💬</span> Message <span style="color:#ef4444;">*</span></span>
+            <span id="char-count" style="font-weight:400;color:#9ca3af;font-size:0.75rem;">0/1000</span>
+          </label>
+          <textarea id="f-message" name="message" placeholder="Écrivez votre message ici..." required maxlength="1000" rows="5" class="field-input" style="resize:none;min-height:130px;line-height:1.6;"></textarea>
+          <div id="err-message" class="field-err">⚠ Message trop court (10 caractères min.)</div>
+        </div>
+        <button type="submit" id="contactSubmit" class="submit-btn">
+          <span id="btn-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;">
+              <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Envoyer mon message
+          </span>
+          <svg id="btn-spinner" style="display:none;width:20px;height:20px;animation:spin .7s linear infinite;" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+            <path d="M12 2a10 10 0 0110 10" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div id="rate-msg"><span>⏳ Prochain envoi dans </span><strong id="countdown">30</strong><span>s</span></div>
+        <div id="form-error" style="display:none;padding:0.9rem;border-radius:10px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;font-size:0.85rem;">
+          ⚠️ <span id="form-error-msg"></span>
+        </div>
+      </form>
+      <div id="contactSuccess">
+        <div>✅</div>
+        <h4>Message bien reçu !</h4>
+        <p>Merci. Nous vous répondrons dans les <strong>24h ouvrées</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2024 IT SERVICES & CREATIVE – Tous droits réservés.</p>
+  <p>team.itsc.228@gmail.com</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img id="lb-img" src="" alt="Lightbox image">
+  <button onclick="document.getElementById('lightbox').style.display='none'" style="position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,0.15);border:none;color:white;font-size:1.8rem;width:48px;height:48px;border-radius:50%;cursor:pointer;">✕</button>
+</div>
+
+<script>
+// ==== THEME TOGGLE ====
+(function(){
+  const btn=document.querySelector('.toggle-theme');
+  const setTheme=(theme)=>{document.documentElement.setAttribute('data-theme',theme);localStorage.setItem('theme',theme);btn.textContent=theme==='dark'?'☀️':'🌙';};
+  const saved=localStorage.getItem('theme')||'light';
+  setTheme(saved);
+  btn.addEventListener('click',()=>{setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');});
+})();
+
+// ==== NAVBAR SCROLL & BURGER ====
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').classList.toggle('scrolled',window.scrollY>80);
+},{passive:true});
+const burger=document.querySelector('.burger');
+burger?.addEventListener('click',()=>{
+  burger.classList.toggle('open');
+  document.querySelector('nav').classList.toggle('mobile-open');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{burger?.classList.remove('open');document.querySelector('nav').classList.remove('mobile-open');});
+});
+const obsNav=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    const link=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');
+    if(link)link.classList.toggle('active',e.isIntersecting);
+  });
+},{threshold:0.4});
+document.querySelectorAll('section[id]').forEach(s=>obsNav.observe(s));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// ==== HERO CAROUSEL ====
+(function(){
+  const bgs=document.querySelectorAll('.hero-bg');
+  const dotsEl=document.querySelector('.hero-dots');
+  if(!bgs.length) return;
+  let cur=0, timer;
+  bgs.forEach((_,i)=>{
+    const d=document.createElement('span');
+    d.style.cssText='display:block;width:8px;height:8px;border-radius:50%;cursor:pointer;transition:all .3s;background:'+ (i===0?'white':'rgba(255,255,255,.4)') ;
+    d.addEventListener('click',()=>go(i));
+    dotsEl.appendChild(d);
+  });
+  function go(n){
+    bgs[cur].classList.remove('active'); bgs[cur].style.opacity='0';
+    const dots=dotsEl.querySelectorAll('span');
+    if(dots[cur])dots[cur].style.background='rgba(255,255,255,.4)';
+    cur=(n+bgs.length)%bgs.length;
+    bgs[cur].classList.add('active'); bgs[cur].style.opacity='1';
+    if(dots[cur])dots[cur].style.background='white';
+  }
+  function next(){go(cur+1);}
+  function start(){timer=setInterval(next,4000);}
+  document.querySelector('.hero-prev')?.addEventListener('click',()=>{clearInterval(timer);go(cur-1);start();});
+  document.querySelector('.hero-next')?.addEventListener('click',()=>{clearInterval(timer);go(cur+1);start();});
+  const hero=document.getElementById('hero');
+  hero?.addEventListener('mouseenter',()=>clearInterval(timer));
+  hero?.addEventListener('mouseleave',start);
+  start();
+})();
+
+// ==== ACCORDION SERVICES ====
+function toggleAcc(btn){
+  const item=btn.closest('.acc-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.acc-item.open').forEach(el=>el.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+document.querySelectorAll('.acc-item').forEach((el,i)=>{if(i===0)el.classList.add('open');});
+function initSvcCarousels(){
+  document.querySelectorAll('.svc-card').forEach(card=>{
+    const imgs=card.querySelectorAll('.svc-img');
+    if(imgs.length<2)return;
+    let i=0;
+    setInterval(()=>{
+      imgs[i].classList.remove('svc-active');
+      i=(i+1)%imgs.length;
+      imgs[i].classList.add('svc-active');
+    },3000);
+  });
+}
+initSvcCarousels();
+
+// ==== FAQ TOGGLE ====
+function toggleFaq(el){
+  const item=el.parentElement;
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+// ==== LIGHTBOX ====
+document.querySelectorAll('.gal-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    document.getElementById('lb-img').src=item.dataset.src||item.querySelector('img').src;
+    document.getElementById('lightbox').style.display='flex';
+  });
+});
+document.getElementById('lightbox').addEventListener('click',e=>{
+  if(e.target===e.currentTarget) e.currentTarget.style.display='none';
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').style.display='none';});
+
+// ==== CONTACT FORM ====
+(function(){
+  const form=document.getElementById('contactForm');
+  const success=document.getElementById('contactSuccess');
+  const errBox=document.getElementById('form-error');
+  const btn=document.getElementById('contactSubmit');
+  const btnText=document.getElementById('btn-text');
+  const spinner=document.getElementById('btn-spinner');
+  const rateMsg=document.getElementById('rate-msg');
+  const cdEl=document.getElementById('countdown');
+  if(!form) return;
+
+  // Character count
+  const msg=document.getElementById('f-message');
+  const cc=document.getElementById('char-count');
+  msg?.addEventListener('input',()=>{
+    const len=msg.value.length;
+    cc.textContent=`${len}/1000`;
+    cc.style.color= len>900 ? '#ef4444' : '#9ca3af';
+  });
+
+  const rules={
+    'f-nom': v=>v.trim().length>=2,
+    'f-prenom': v=>v.trim().length>=2,
+    'f-email': v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    'f-message': v=>v.trim().length>=10
+  };
+  function validate(id){
+    const el=document.getElementById(id);
+    const ok=rules[id]?rules[id](el.value):true;
+    el.classList.toggle('invalid',!ok);
+    const err=document.getElementById('err-'+id.replace('f-',''));
+    if(err)err.style.display=ok?'none':'block';
+    return ok;
+  }
+  ['f-nom','f-prenom','f-email','f-message'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('blur',()=>validate(id));
+    el.addEventListener('input',()=>{if(el.classList.contains('invalid'))validate(id);});
+  });
+
+  function setLoading(on){
+    btn.disabled=on;
+    btnText.style.display=on?'none':'flex';
+    spinner.style.display=on?'block':'none';
+  }
+  function showError(msg){
+    errBox.style.display='block';
+    document.getElementById('form-error-msg').textContent=msg;
+    setTimeout(()=>{errBox.style.display='none';},6000);
+  }
+  function cooldown(sec){
+    btn.disabled=true;
+    rateMsg.style.display='block';
+    let remaining=sec;
+    cdEl.textContent=remaining;
+    const interval=setInterval(()=>{
+      remaining--;
+      cdEl.textContent=remaining;
+      if(remaining<=0){
+        clearInterval(interval);
+        btn.disabled=false;
+        rateMsg.style.display='none';
+        setLoading(false);
+      }
+    },1000);
+  }
+
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    errBox.style.display='none';
+    const honeypot=form.querySelector('[name="website"]');
+    if(honeypot && honeypot.value) return;
+    const allValid=['f-nom','f-prenom','f-email','f-message'].every(id=>validate(id));
+    if(!allValid){form.querySelector('.invalid')?.focus();return;}
+    const last=sessionStorage.getItem('lastSent');
+    if(last && Date.now()-parseInt(last)<30000){
+      cooldown(Math.ceil((30000-(Date.now()-parseInt(last)))/1000));
+      return;
+    }
+    setLoading(true);
+    try{
+      const payload=Object.fromEntries(new FormData(form));
+      let ok=false;
+      if(location.port==='5000' || location.hostname==='localhost'){
+        const r=await fetch('/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        const d=await r.json();
+        if(!d.success) throw new Error(d.message||'Erreur serveur');
+        ok=true;
+      }else{
+        const action=form.getAttribute('action')||'';
+        if(!action||action.includes('VOTRE_ID')){
+          ok=true;
+        }else{
+          const r=await fetch(action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+          if(!r.ok) throw new Error('Erreur réseau ('+r.status+')');
+          ok=true;
+        }
+      }
+      if(ok){
+        sessionStorage.setItem('lastSent',Date.now().toString());
+        form.style.display='none';
+        success.style.display='block';
+        success.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    }catch(err){
+      setLoading(false);
+      showError(err.message.includes('réseau')||err.message.includes('fetch')
+        ?'Problème de connexion. Vérifiez votre internet.'
+        :err.message||'Erreur. Contactez-nous directement par email.');
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
