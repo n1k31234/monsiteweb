@@ -1,7 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "**/*", "use": "@vercel/static" }
+    { "src": "**/*", "use": "@vercel/static",
+      "config": { "excludeFiles": "app.py,requirements.txt,site_data.db,*.pyc" }
+    }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/$1" }
