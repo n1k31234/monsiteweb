@@ -399,11 +399,180 @@ footer .social a{margin:0 .5rem;}
 .toggle-theme{
   cursor:pointer;background:none;border:none;color:#fff;font-size:1.2rem;
 }
+
+/* =========================================
+   PREMIUM RESPONSIVE FIX
+========================================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+section{
+  width:100%;
+  overflow:hidden;
+}
+
+h1,h2,h3,h4{
+  line-height:1.2;
+}
+
+p{
+  word-break:break-word;
+}
+
+nav.mobile-open{
+  background:#0b0b14;
+}
+
+.svc-card{
+  transition:
+  transform .35s ease,
+  box-shadow .35s ease,
+  border-color .35s ease;
+}
+
+.svc-card:hover{
+  transform:translateY(-10px);
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.svc-card,
+.team-card,
+.gal-item{
+  will-change:transform;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.field-input,
+input,
+textarea,
+select{
+  font-size:16px;
+}
+
+@media(max-width:900px){
+
+  #about{
+    grid-template-columns:1fr;
+  }
+
+  #about .about-img{
+    min-height:320px;
+  }
+
+  #about .about-text{
+    padding:3rem 1.5rem;
+  }
+
+  #contact .contact-inner{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  .contact-form{
+    padding:2rem 1.2rem;
+    border-radius:20px;
+  }
+}
+
+@media(max-width:768px){
+
+  nav{
+    padding:0 1rem;
+  }
+
+  nav .nav-logo img{
+    height:38px;
+  }
+
+  nav.mobile-open .nav-links-wrap{
+    max-height:100vh;
+    overflow-y:auto;
+  }
+
+  #hero{
+    min-height:100svh;
+    height:auto;
+  }
+
+  .hero-content{
+    padding:7rem 1.5rem 4rem;
+  }
+
+  .hero-content h1{
+    font-size:2.2rem;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+    max-width:100%;
+  }
+
+  .hero-content .cta-group{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:1rem;
+  }
+
+  .hero-content .cta-group a{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-prev,
+  .hero-next{
+    display:none;
+  }
+
+  .hero-content img{
+    height:70px;
+  }
+
+  #services,
+  #team,
+  #gallery,
+  #faq{
+    padding:4rem 1rem;
+  }
+
+  .svc-card{
+    border-radius:16px;
+  }
+
+  .svc-body{
+    padding:1rem;
+  }
+
+  .svc-img-wrap{
+    height:220px;
+  }
+
+  .parallax,
+  #contact{
+    background-attachment:scroll;
+  }
+}
+
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo"><img src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'"></div>
+  <div class="nav-logo"><img loading="lazy" src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'"></div>
   <div class="nav-links-wrap">
     <ul class="nav-links">
       <li><a href="#hero" class="active">Accueil</a></li>
@@ -428,9 +597,9 @@ footer .social a{margin:0 .5rem;}
   <div class="hero-bg" style="background-image:url('images/hero/hero-3.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <img src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'">
+    <img loading="lazy" src="LOGO_ENTREPRISE.png" alt="IT SERVICES & CREATIVE Logo" onerror="this.style.display='none'">
     <h1>IT SERVICES & CREATIVE</h1>
-    <p> Transformer les idées en résultas conncrets.</p>
+    <p> Transformer les idées en résultats concrets.</p>
     <div class="cta-group">
       <a href="#services">Découvrir</a>
       <a href="#contact">Nous contacter</a>
@@ -443,7 +612,7 @@ footer .social a{margin:0 .5rem;}
 
 <!-- À PROPOS -->
 <section id="about">
-  <div class="about-img"><img src="images/apropos/apropos.jpg" alt="Notre histoire"></div>
+  <div class="about-img"><img loading="lazy" src="images/apropos/apropos.jpg" alt="Notre histoire"></div>
   <div class="about-text">
     <h2 style="color:#111;font-size:2rem;margin-bottom:.5rem;">A Propos</h2>
     <p style="color:#333;font-size:1rem;line-height:1.6;">
@@ -482,8 +651,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 1 : Site Vitrine -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/services-informatiqu-1.jpg" class="svc-img svc-active" alt="Site Vitrine">
-                <img src="images/services/services-informatiqu-2.jpg" class="svc-img" alt="Site Vitrine">
+                <img loading="lazy" src="images/services/services-informatiqu-1.jpg" class="svc-img svc-active" alt="Site Vitrine">
+                <img loading="lazy" src="images/services/services-informatiqu-2.jpg" class="svc-img" alt="Site Vitrine">
                 <span class="svc-price">À partir de 115 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -503,8 +672,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 2 : Site de Réservation -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/re.jpg" class="svc-img svc-active" alt="Site de Réservation">
-                <img src="images/services/reservation.jpg" class="svc-img" alt="Site de Réservation">
+                <img loading="lazy" src="images/services/re.jpg" class="svc-img svc-active" alt="Site de Réservation">
+                <img loading="lazy" src="images/services/reservation.jpg" class="svc-img" alt="Site de Réservation">
                 <span class="svc-price">À partir de 250 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -523,8 +692,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 3 : Site E-commerce -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/ecomerce11.jpg" class="svc-img svc-active" alt="E-commerce">
-                <img src="images/services/ecomerce.jpg" class="svc-img" alt="E-commerce">
+                <img loading="lazy" src="images/services/ecomerce11.jpg" class="svc-img svc-active" alt="E-commerce">
+                <img loading="lazy" src="images/services/ecomerce.jpg" class="svc-img" alt="E-commerce">
                 <span class="svc-price">À partir de 350 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -543,8 +712,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 4 : Application Mobile -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/app1.jpg" class="svc-img svc-active" alt="Application Mobile">
-                <img src="images/services/app2.jpg" class="svc-img" alt="Application Mobile">
+                <img loading="lazy" src="images/services/app1.jpg" class="svc-img svc-active" alt="Application Mobile">
+                <img loading="lazy" src="images/services/app2.jpg" class="svc-img" alt="Application Mobile">
                 <span class="svc-price">À partir de 500 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -563,8 +732,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 5 :✍️ Blog Professionnel-->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/blog1.jpg" class="svc-img svc-active" alt="Logiciel de Gestion">
-                <img src="images/services/blog2.jpg" class="svc-img" alt="Logiciel de Gestion">
+                <img loading="lazy" src="images/services/blog1.jpg" class="svc-img svc-active" alt="Logiciel de Gestion">
+                <img loading="lazy" src="images/services/blog2.jpg" class="svc-img" alt="Logiciel de Gestion">
                 <span class="svc-price">À partir de 150 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -583,8 +752,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 6 : Maintenance & Support -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/support.jpg" class="svc-img svc-active" alt="Maintenance">
-                <img src="images/services/support2.jpg" class="svc-img" alt="Maintenance">
+                <img loading="lazy" src="images/services/support.jpg" class="svc-img svc-active" alt="Maintenance">
+                <img loading="lazy" src="images/services/support2.jpg" class="svc-img" alt="Maintenance">
                 <span class="svc-price">À partir de 25 000 FCFA/mois</span>
               </div>
               <div class="svc-body">
@@ -616,8 +785,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
             <!-- Carte 1 : Identité Visuelle -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/iv.jpg" class="svc-img svc-active" alt="Identité Visuelle">
-                <img src="images/services/iv2.jpg" class="svc-img" alt="Identité Visuelle">
+                <img loading="lazy" src="images/services/iv.jpg" class="svc-img svc-active" alt="Identité Visuelle">
+                <img loading="lazy" src="images/services/iv2.jpg" class="svc-img" alt="Identité Visuelle">
                 <span class="svc-price">À partir de 80 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -639,8 +808,8 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
  -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/hr1.jpg" class="svc-img svc-active" alt="Graphisme Print">
-                <img src="images/services/hr2.jpg" class="svc-img" alt="Graphisme Print">
+                <img loading="lazy" src="images/services/hr1.jpg" class="svc-img svc-active" alt="Graphisme Print">
+                <img loading="lazy" src="images/services/hr2.jpg" class="svc-img" alt="Graphisme Print">
                 <span class="svc-price">À partir de 15 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -662,8 +831,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
             <!-- Carte 3 : Tableaux photos personnalisés  -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/tp1.jpg" class="svc-img svc-active" alt="Réseaux Sociaux">
-                <img src="images/services/tp22.jpg" class="svc-img" alt="Réseaux Sociaux">
+                <img loading="lazy" src="images/services/tp1.jpg" class="svc-img svc-active" alt="Réseaux Sociaux">
+                <img loading="lazy" src="images/services/tp22.jpg" class="svc-img" alt="Réseaux Sociaux">
                 <span class="svc-price">À partir de ...</span>
               </div>
               <div class="svc-body">
@@ -684,8 +853,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
             <!-- Cadre photo vitré -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/vitre1.jpg" class="svc-img svc-active" alt="Photo Vidéo">
-                <img src="images/services/vitre4.jpg" class="svc-img" alt="Photo Vidéo">
+                <img loading="lazy" src="images/services/vitre1.jpg" class="svc-img svc-active" alt="Photo Vidéo">
+                <img loading="lazy" src="images/services/vitre4.jpg" class="svc-img" alt="Photo Vidéo">
                 <span class="svc-price">À partir de 5000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -705,8 +874,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
             <!-- Modele sparkle -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/sp.jpg" class="svc-img svc-active" alt="Campagne Pub">
-                <img src="images/services/tp2.jpg" class="svc-img" alt="Campagne Pub">
+                <img loading="lazy" src="images/services/sp.jpg" class="svc-img svc-active" alt="Campagne Pub">
+                <img loading="lazy" src="images/services/tp2.jpg" class="svc-img" alt="Campagne Pub">
                 <span class="svc-price">À partir de 9 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -725,8 +894,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
             <!-- Plexiglass -->
             <div class="svc-card">
               <div class="svc-img-wrap">
-                <img src="images/services/pl.jpg" class="svc-img svc-active" alt="Rédaction">
-                <img src="images/services/pl.jpg" class="svc-img" alt="Rédaction">
+                <img loading="lazy" src="images/services/pl.jpg" class="svc-img svc-active" alt="Rédaction">
+                <img loading="lazy" src="images/services/pl.jpg" class="svc-img" alt="Rédaction">
                 <span class="svc-price">À partir de 10 000 FCFA</span>
               </div>
               <div class="svc-body">
@@ -761,27 +930,27 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
   <h2>Nos Réalisations</h2>
   <div class="gallery-grid">
     <div class="gal-item" data-src="images/galerie/vitrine.jpg">
-      <img src="images/galerie/vitrine.jpg" alt="Réalisation 1">
+      <img loading="lazy" src="images/galerie/vitrine.jpg" alt="Réalisation 1">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
     <div class="gal-item" data-src="images/galerie/blog.jpg">
-      <img src="images/galerie/blog.jpg" alt="Réalisation 2">
+      <img loading="lazy" src="images/galerie/blog.jpg" alt="Réalisation 2">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
     <div class="gal-item" data-src="images/galerie/r3.jpg">
-      <img src="images/galerie/r3.jpg" alt="Réalisation 3">
+      <img loading="lazy" src="images/galerie/r3.jpg" alt="Réalisation 3">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
     <div class="gal-item" data-src="images/galerie/r4.jpg">
-      <img src="images/galerie/r4.jpg" alt="Réalisation 4">
+      <img loading="lazy" src="images/galerie/r4.jpg" alt="Réalisation 4">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
     <div class="gal-item" data-src="images/galerie/r5.jpg">
-      <img src="images/galerie/r5.jpg" alt="Réalisation 5">
+      <img loading="lazy" src="images/galerie/r5.jpg" alt="Réalisation 5">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
     <div class="gal-item" data-src="images/galerie/r.jpg">
-      <img src="images/galerie/r6.jpg" alt="Réalisation 6">
+      <img loading="lazy" src="images/galerie/r6.jpg" alt="Réalisation 6">
       <div class="gal-overlay"><span>🔍</span></div>
     </div>
   </div>
@@ -796,7 +965,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
   <div class="team-grid">
     <div class="team-card">
       <div class="team-img-wrap">
-        <img src="images/equipe/image2.jpg" alt="Kouadio Aïssata">
+        <img loading="lazy" src="images/equipe/image2.jpg" alt="Kouadio Aïssata">
         <div class="team-overlay"><a href="#contact">Contacter</a></div>
       </div>
       <div class="team-info">
@@ -807,7 +976,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
     </div>
     <div class="team-card">
       <div class="team-img-wrap">
-        <img src="images/equipe/image.jpg" alt="Moussa Mensah">
+        <img loading="lazy" src="images/equipe/image.jpg" alt="Moussa Mensah">
         <div class="team-overlay"><a href="#contact">Contacter</a></div>
       </div>
       <div class="team-info">
@@ -818,7 +987,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
     </div>
     <div class="team-card">
       <div class="team-img-wrap">
-        <img src="images/equipe/image3.jpg" alt="Aminata Tava">
+        <img loading="lazy" src="images/equipe/image3.jpg" alt="Aminata Tava">
         <div class="team-overlay"><a href="#contact">Contacter</a></div>
       </div>
       <div class="team-info">
@@ -892,7 +1061,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
     <div class="contact-form" id="contactFormWrapper">
       <form id="contactForm" novalidate>
         <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
-        <input type="hidden" name="csrf_token" value="CSRF_TOKEN_PLACEHOLDER">
+        
         <!-- NOM -->
         <div class="field-wrap">
           <label for="f-nom" class="field-label"><span style="color:var(--accent);">👤</span> Nom <span style="color:#ef4444;">*</span></label>
@@ -954,7 +1123,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
 
 <!-- Lightbox -->
 <div id="lightbox">
-  <img id="lb-img" src="" alt="Lightbox image">
+  <img loading="lazy" id="lb-img" src="" alt="Lightbox image">
   <button onclick="document.getElementById('lightbox').style.display='none'" style="position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,0.15);border:none;color:white;font-size:1.8rem;width:48px;height:48px;border-radius:50%;cursor:pointer;">✕</button>
 </div>
 
@@ -1182,5 +1351,22 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementB
 })();
 
 </script>
+
+  <script>
+    const _SB_URL='VOTRE_URL_SUPABASE',_SB_KEY='VOTRE_CLE_SUPABASE';
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('form[action*="formspree"]').forEach(form=>{
+        form.addEventListener('submit',async()=>{
+          const d=Object.fromEntries(new FormData(form));
+          if(d.website)return;
+          try{await fetch(_SB_URL+'/rest/v1/submissions',{method:'POST',
+            headers:{'apikey':_SB_KEY,'Authorization':'Bearer '+_SB_KEY,
+              'Content-Type':'application/json','Prefer':'return=minimal'},
+            body:JSON.stringify({form_type:'contact',data_json:d,
+              created_at:new Date().toISOString()})});}catch(e){}
+        });
+      });
+    });
+  </script>
 </body>
 </html>
