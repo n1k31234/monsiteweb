@@ -587,95 +587,15 @@ select{
 }
 
 
-/* SOLUTIONS LOGICIELLES — couleurs du logo (bleu #04A1DF, orange #F5960B) */
-#solutions{background:linear-gradient(180deg,#f2f9fd 0%,#ffffff 100%);color:#0f2133;padding:6rem 5%;}
-.sol-inner{max-width:1140px;margin:0 auto;}
-.sol-header{text-align:center;max-width:760px;margin:0 auto 3rem;}
-.sol-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange-dark);}
-.sol-header h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 1rem;color:#0f2133;}
-.sol-header h2 em{font-style:normal;color:var(--blue);}
-.sol-header p{color:#55657a;}
-.sol-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;color:#fff;
-  background:linear-gradient(110deg,rgba(3,95,143,.96) 0%,rgba(4,140,200,.90) 60%,rgba(4,161,223,.80) 100%),url('images/solutions/boutique.jpg') center/cover,#047fb5;
-  border-radius:22px;padding:2.6rem;margin-bottom:2.2rem;box-shadow:0 20px 50px rgba(4,121,176,.28);position:relative;overflow:hidden;}
-.sol-featured::after{content:'';position:absolute;right:-120px;top:-140px;width:520px;height:260px;border-radius:50%;
-  border-bottom:8px solid var(--orange);transform:rotate(-12deg);opacity:.85;pointer-events:none;z-index:0;}
-.sol-featured>*{position:relative;z-index:1;}
-.sol-flag{display:inline-block;background:var(--orange);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
-.sol-featured h3{font-size:1.6rem;font-weight:800;margin-bottom:.6rem;}
-.sol-featured .sol-pb{color:rgba(255,255,255,.9);}
-.sol-pb{color:#55657a;font-size:.92rem;margin-bottom:1rem;}
-.sol-feats{list-style:none;margin:0 0 1rem;padding:0;}
-.sol-feats li{position:relative;padding-left:1.5rem;font-size:.88rem;margin-bottom:.35rem;color:#26384c;}
-.sol-feats li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:800;}
-.sol-featured .sol-feats li{color:#fff;}
-.sol-featured .sol-feats li::before{color:var(--orange);}
-.sol-feats-2{display:grid;grid-template-columns:1fr 1fr;column-gap:1rem;}
-.sol-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem;}
-.sol-badges span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);}
-.sol-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;}
-.sol-note{font-size:.8rem;color:rgba(255,255,255,.8);flex:1;min-width:200px;}
-.sol-btn{display:inline-block;background:var(--blue-dark);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:.6rem 1.2rem;border-radius:50px;transition:all .3s;white-space:nowrap;}
-.sol-btn:hover{background:#035f8f;transform:translateY(-2px);}
-.sol-btn-lg{font-size:.95rem;padding:.85rem 1.8rem;background:var(--orange);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);}
-.sol-btn-lg:hover{background:var(--orange-dark);}
-.mock{background:#fff;color:#111;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,30,60,.35);font-size:.82rem;}
-.mock-bar{display:flex;align-items:center;gap:6px;background:#0f2133;color:#fff;padding:.6rem .9rem;}
-.mock-bar i{width:9px;height:9px;border-radius:50%;background:#556;display:block;}
-.mock-bar i:first-child{background:var(--orange);}
-.mock-bar i:nth-child(2){background:var(--blue);}
-.mock-bar b{margin-left:.5rem;font-weight:600;font-size:.78rem;}
-.mock-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;padding:1rem;}
-.mock-kpis div{background:#eef7fc;border-radius:10px;padding:.6rem;}
-.mock-kpis small{display:block;color:#5b6b7d;font-size:.68rem;}
-.mock-kpis strong{font-size:1rem;color:#0f2133;}
-.mock-kpis .warn{color:#d97c00;}
-.mock-rows{padding:0 1rem 1rem;}
-.mock-rows div{display:grid;grid-template-columns:1fr auto 80px;gap:.8rem;padding:.45rem 0;border-bottom:1px solid #eef1f4;}
-.mock-rows div span:last-child{text-align:right;}
-.mock-rows .tot{border-bottom:none;font-weight:800;color:var(--blue-dark);}
-.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
-.sol-card{display:flex;flex-direction:column;background:#fff;border:1px solid #e3eef5;border-radius:18px;overflow:hidden;
-  box-shadow:0 6px 24px rgba(15,33,51,.06);transition:all .3s;}
-.sol-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(4,121,176,.16);border-color:rgba(4,161,223,.45);}
-.sol-body{display:flex;flex-direction:column;flex:1;padding:1.4rem 1.6rem 1.6rem;}
-.sol-media{position:relative;height:200px;overflow:hidden;background:linear-gradient(135deg,#d7eef9,#eef7fc);}
-.sol-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s,transform .6s;}
-.sol-img.sol-on{opacity:1;}
-.sol-card:hover .sol-img{transform:scale(1.05);}
-.sol-media.has-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,33,51,.55) 0%,transparent 55%);z-index:1;}
-.sol-media-cap{position:absolute;left:1.1rem;bottom:1rem;z-index:2;display:flex;align-items:center;gap:.6rem;}
-.sol-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.15);}
-.sol-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;background:var(--orange);padding:4px 10px;border-radius:20px;}
-.sol-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:#0f2133;}
-.sol-card .sol-pb{font-size:.85rem;font-style:italic;}
-.sol-card .sol-feats{flex:1;}
-.sol-foot{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding-top:1rem;border-top:1px solid #eef1f4;}
-.sol-price{font-size:.8rem;font-weight:700;color:var(--orange-dark);}
-.sol-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3.2rem;background:#fff;border:1px solid #e3eef5;border-radius:18px;padding:1.6rem;}
-.sol-steps div{display:flex;gap:.8rem;align-items:flex-start;}
-.sol-steps b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
-.sol-steps div:nth-child(even) b{background:var(--orange);}
-.sol-steps span{font-size:.82rem;color:#55657a;}
-.sol-steps strong{display:block;color:#0f2133;font-size:.92rem;}
-.sol-other{text-align:center;margin-top:2.5rem;color:#55657a;}
-.sol-other a{color:var(--blue-dark);font-weight:700;}
-.svc-teaser{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;text-align:left;
-  background:linear-gradient(120deg,#047fb5,#04a1df);border-radius:12px;padding:1.2rem 1.4rem;color:#fff;}
-.svc-teaser strong{display:block;font-size:1rem;}
-.svc-teaser span{font-size:.85rem;color:rgba(255,255,255,.88);}
-.svc-teaser .sol-btn{background:var(--orange);}
-@media(max-width:900px){
-  .sol-featured{grid-template-columns:1fr;padding:1.6rem;}
-  .sol-grid{grid-template-columns:repeat(2,1fr);}
-  .sol-steps{grid-template-columns:repeat(2,1fr);}
-}
-@media(max-width:600px){
-  #solutions{padding:4rem 1rem;}
-  .sol-grid,.sol-steps,.sol-feats-2{grid-template-columns:1fr;}
-  .sol-featured-vis{display:none;}
-  .sol-btn-lg{width:100%;text-align:center;}
-}
+/* LOGICIELS DANS LE CATALOGUE */
+.svc-subtitle{grid-column:1/-1;text-align:left;font-weight:800;font-size:1.05rem;color:#fff;
+  padding:.6rem 0 .2rem;border-bottom:2px solid var(--blue);margin-bottom:.2rem;}
+.svc-subtitle:not(:first-child){margin-top:1.2rem;}
+.svc-ribbon{position:absolute;top:10px;left:10px;z-index:2;background:var(--blue);color:#fff;
+  padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;}
+.svc-card-phare{outline:3px solid var(--orange);}
+.svc-card .svc-price{z-index:2;}
+.acc-item.open .acc-panel{max-height:20000px;}
 </style>
 </head>
 <body>
@@ -686,7 +606,6 @@ select{
       <li><a href="#hero" class="active">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#solutions">Solutions</a></li>
       <li><a href="#gallery">Galerie</a></li>
       <li><a href="#team">Équipe</a></li>
       <li><a href="#testimonials">Témoignages</a></li>
@@ -721,7 +640,7 @@ select{
 
 <!-- À PROPOS -->
 <section id="about">
-  <div class="about-img"><img loading="lazy" src="images/apropos/apropos.jpg" alt="Notre histoire"></div>
+  <div class="about-img"><img loading="lazy" src="https://images.pexels.com/photos/30689114/pexels-photo-30689114.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt="L'équipe IT SERVICES &amp; CREATIVE au travail"></div>
   <div class="about-text">
     <h2 style="color:#111;font-size:2rem;margin-bottom:.5rem;">À propos</h2>
     <p style="color:#333;font-size:1rem;line-height:1.6;">
@@ -751,38 +670,153 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
       <!-- ═══ DÉVELOPPEMENT WEB & APPLICATION ═══ -->
       <div class="acc-item">
         <button class="acc-btn" onclick="toggleAcc(this)">
-          <span><span style="font-size:1.4rem;margin-right:.7rem;">💻</span>Développement web &amp; Application</span>
+          <span><span style="font-size:1.4rem;margin-right:.7rem;">💻</span>Logiciels de gestion, sites web &amp; applications</span>
           <span class="acc-arrow">▼</span>
         </button>
         <div class="acc-panel">
           <div class="svc-grid">
-            <div class="svc-teaser">
-              <div><strong>🧩 Logiciels de gestion prêts à l'emploi</strong>
-              <span>Boutique, clinique, cabinet d'huissier, agence immobilière, dépôt de boissons, école, centre de formation…</span></div>
-              <a href="#solutions" class="sol-btn">Voir nos solutions</a>
-            </div>
+            <div class="svc-subtitle">🧩 Nos logiciels de gestion — produits phares</div>
 
-
-            <!-- Carte 1 : Site Vitrine -->
-            <div class="svc-card">
+            <!-- Logiciel : Gestion de boutique -->
+            <div class="svc-card svc-card-phare">
               <div class="svc-img-wrap">
-                <img loading="lazy" src="images/services/services-informatiqu-1.jpg" class="svc-img svc-active" alt="Site Vitrine">
-                <img loading="lazy" src="images/services/services-informatiqu-2.jpg" class="svc-img" alt="Site Vitrine">
-                <span class="svc-price">À partir de 115 000 FCFA</span>
+                <img loading="lazy" src="https://images.pexels.com/photos/30020992/pexels-photo-30020992.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de boutique">
+                <img loading="lazy" src="https://images.pexels.com/photos/30848031/pexels-photo-30848031.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de boutique">
+                <span class="svc-ribbon">⭐ Produit phare</span>
+                <span class="svc-price">Essai gratuit 21 jours</span>
               </div>
               <div class="svc-body">
-                <h4>🌐 Site Vitrine</h4>
-                <p style="color:#333;text-align:left;">Présentez votre entreprise sur Internet avec élégance.<br>
-                  ✔️ Présentation de votre activité<br>
-                  ✔️ Galerie photos<br>
-                  ✔️ Formulaire de contact<br>
-                  ✔️ Intégration WhatsApp<br>
-                  ✔️ Version mobile responsive<br>
-                  <em>Idéal pour : commerçants, artisans, PME.</em>
+                <h4>🛒 Gestion de boutique &amp; commerce</h4>
+                <p style="color:#333;text-align:left;">Sachez à tout moment ce qui reste en stock et ce que la caisse a encaissé.<br>
+                  ✅ Caisse rapide &amp; ticket thermique<br>
+                  ✅ Stock et alertes de rupture<br>
+                  ✅ 100 % hors ligne — PC &amp; Android<br>
+                  ✅ Accès du gérant depuis son PC (Wi-Fi)<br>
+                  <em>Idéal pour : boutiques, supérettes, quincailleries, pharmacies.</em>
                 </p>
-                <a href="#contact" class="svc-btn">En savoir plus</a>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20boutique%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
               </div>
             </div>
+
+            <!-- Logiciel : Gestion de cabinet d'huissier -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de cabinet d'huissier">
+                <img loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de cabinet d'huissier">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>⚖️ Gestion de cabinet d'huissier</h4>
+                <p style="color:#333;text-align:left;">Fini les dossiers éparpillés entre classeurs et fichiers Excel.<br>
+                  ✅ Dossiers et actes centralisés<br>
+                  ✅ Suivi des significations et procédures<br>
+                  ✅ Échéancier des audiences et délais<br>
+                  ✅ Facturation et recouvrements<br>
+                  <em>Idéal pour : huissiers de justice, commissaires de justice.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20cabinet%20d%27huissier%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion d'agence immobilière -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/7642008/pexels-photo-7642008.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion d'agence immobilière">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🏠 Gestion d'agence immobilière</h4>
+                <p style="color:#333;text-align:left;">Suivez chaque bien, chaque locataire et chaque loyer sans effort.<br>
+                  ✅ Biens à louer ou à vendre<br>
+                  ✅ Propriétaires et locataires<br>
+                  ✅ Loyers, impayés et quittances<br>
+                  ✅ Contrats et commissions<br>
+                  <em>Idéal pour : agences immobilières, gestionnaires de biens.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27agence%20immobili%C3%A8re%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de clinique -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de clinique">
+                <img loading="lazy" src="https://images.pexels.com/photos/6097758/pexels-photo-6097758.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de clinique">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🏥 Gestion de clinique</h4>
+                <p style="color:#333;text-align:left;">Un accueil plus fluide et une caisse enfin maîtrisée.<br>
+                  ✅ Dossiers patients<br>
+                  ✅ Rendez-vous et consultations<br>
+                  ✅ Ordonnances<br>
+                  ✅ Facturation, caisse et pharmacie<br>
+                  <em>Idéal pour : cliniques, cabinets médicaux, centres de santé.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20clinique%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de dépôt de boissons -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/17364034/pexels-photo-17364034.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de dépôt de boissons">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🍾 Gestion de dépôt de boissons</h4>
+                <p style="color:#333;text-align:left;">Casiers, emballages et crédits clients qui tombent enfin juste.<br>
+                  ✅ Stock par casier ou bouteille<br>
+                  ✅ Emballages consignés<br>
+                  ✅ Ventes en gros et au détail<br>
+                  ✅ Crédits clients et fournisseurs<br>
+                  <em>Idéal pour : dépôts de boissons, grossistes, distributeurs.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion d'établissement scolaire -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/31820972/pexels-photo-31820972.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion d'établissement scolaire">
+                <img loading="lazy" src="https://images.pexels.com/photos/5905919/pexels-photo-5905919.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion d'établissement scolaire">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🎓 Gestion d'établissement scolaire</h4>
+                <p style="color:#333;text-align:left;">Inscriptions, scolarités et bulletins prêts en quelques clics.<br>
+                  ✅ Inscriptions des élèves<br>
+                  ✅ Scolarité et paiements<br>
+                  ✅ Notes et bulletins<br>
+                  ✅ Emplois du temps et absences<br>
+                  <em>Idéal pour : écoles primaires, collèges, lycées.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27%C3%A9tablissement%20scolaire%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de centre de formation -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/34046709/pexels-photo-34046709.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de centre de formation">
+                <img loading="lazy" src="https://images.pexels.com/photos/5940713/pexels-photo-5940713.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de centre de formation">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>📚 Gestion de centre de formation</h4>
+                <p style="color:#333;text-align:left;">Apprenants, sessions et paiements par tranches sous contrôle.<br>
+                  ✅ Apprenants et sessions<br>
+                  ✅ Paiements par tranches<br>
+                  ✅ Feuilles de présence<br>
+                  ✅ Attestations et certificats<br>
+                  <em>Idéal pour : centres de formation, instituts, écoles professionnelles.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20centre%20de%20formation%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <div class="svc-subtitle">🌐 Sites web &amp; applications sur mesure</div>
 
             <!-- Carte 2 : Site de Réservation -->
             <div class="svc-card">
@@ -1035,156 +1069,6 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
   </div>
 </section>
 
-
-<!-- SOLUTIONS LOGICIELLES -->
-<section id="solutions">
-  <div class="sol-inner">
-    <div class="sol-header">
-      <span class="sol-eyebrow">Développement d'applications</span>
-      <h2>Des logiciels de gestion déjà conçus <em>pour votre métier</em></h2>
-      <p>Nous ne partons pas de zéro : nos solutions sont déjà développées et éprouvées. Nous les adaptons à votre structure, nous les installons et nous formons votre équipe.</p>
-    </div>
-
-    <article class="sol-featured">
-      <div class="sol-featured-txt">
-        <span class="sol-flag">⭐ Produit phare</span>
-        <h3>🛒 Gestion de boutique &amp; commerce</h3>
-        <p class="sol-pb">Vous ne savez jamais exactement ce qui reste en stock ni ce que la caisse a encaissé ? Notre logiciel de caisse et de stock vous donne la réponse en un clic.</p>
-        <ul class="sol-feats sol-feats-2">
-          <li>Caisse rapide et ticket thermique</li>
-          <li>Stock et alertes de rupture</li>
-          <li>Tableau de bord des ventes</li>
-          <li>Accès du gérant depuis son PC (réseau Wi-Fi local)</li>
-        </ul>
-        <div class="sol-badges">
-          <span>💻 Windows</span><span>📱 Android</span><span>📴 100 % hors ligne</span><span>🧾 Impression thermique</span>
-        </div>
-        <div class="sol-cta-row">
-          <a class="sol-btn sol-btn-lg" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20boutique%20%C2%BB." target="_blank" rel="noopener noreferrer">Essayer gratuitement 21 jours</a>
-          <span class="sol-note">Idéal pour : boutiques, supérettes, quincailleries, pharmacies, magasins.</span>
-        </div>
-      </div>
-      <div class="sol-featured-vis" aria-hidden="true">
-        <div class="mock">
-          <div class="mock-bar"><i></i><i></i><i></i><b>Caisse — ITSC</b></div>
-          <div class="mock-kpis"><div><small>Ventes du jour</small><strong>248 500 F</strong></div><div><small>Tickets</small><strong>63</strong></div><div><small>Ruptures</small><strong class="warn">4</strong></div></div>
-          <div class="mock-rows">
-            <div><span>Riz 25 kg</span><span>x2</span><span>36 000</span></div>
-            <div><span>Huile 5 L</span><span>x3</span><span>19 500</span></div>
-            <div><span>Sucre 1 kg</span><span>x6</span><span>4 800</span></div>
-            <div class="tot"><span>Total</span><span></span><span>60 300 F</span></div>
-          </div>
-        </div>
-      </div>
-    </article>
-    <div class="sol-grid">
-      <article class="sol-card">
-        <div class="sol-media" data-icon="⚖️">
-          <img loading="lazy" src="images/solutions/huissier-1.jpg" class="sol-img sol-on" alt="Gestion de cabinet d'huissier" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/huissier-2.jpg" class="sol-img" alt="Gestion de cabinet d'huissier" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">⚖️</span><span class="sol-tag">Cabinet d'huissier</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion de cabinet d'huissier</h3>
-        <p class="sol-pb">Vos dossiers, actes et délais sont éparpillés entre classeurs et fichiers Excel ?</p>
-        <ul class="sol-feats"><li>Dossiers et actes centralisés</li><li>Suivi des significations et procédures</li><li>Échéancier des audiences et délais</li><li>Clients, débiteurs et recouvrements</li><li>Facturation et encaissements</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20cabinet%20d%27huissier%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media" data-icon="🏠">
-          <img loading="lazy" src="images/solutions/immobilier-1.jpg" class="sol-img sol-on" alt="Gestion d'agence immobilière" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/immobilier-2.jpg" class="sol-img" alt="Gestion d'agence immobilière" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏠</span><span class="sol-tag">Agence immobilière</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion d'agence immobilière</h3>
-        <p class="sol-pb">Difficile de suivre les loyers, les impayés et les contrats de chaque bien ?</p>
-        <ul class="sol-feats"><li>Biens à louer ou à vendre</li><li>Propriétaires et locataires</li><li>Suivi des loyers et des impayés</li><li>Contrats et quittances</li><li>Calcul des commissions</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27agence%20immobili%C3%A8re%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media" data-icon="🏥">
-          <img loading="lazy" src="images/solutions/clinique-1.jpg" class="sol-img sol-on" alt="Gestion de clinique" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/clinique-2.jpg" class="sol-img" alt="Gestion de clinique" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏥</span><span class="sol-tag">Clinique</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion de clinique</h3>
-        <p class="sol-pb">Fiches patients papier, files d'attente, caisse difficile à contrôler ?</p>
-        <ul class="sol-feats"><li>Dossiers patients</li><li>Rendez-vous et consultations</li><li>Ordonnances</li><li>Facturation et caisse</li><li>Pharmacie et stock de médicaments</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20clinique%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media" data-icon="🍾">
-          <img loading="lazy" src="images/solutions/boissons-1.jpg" class="sol-img sol-on" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/boissons-2.jpg" class="sol-img" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🍾</span><span class="sol-tag">Dépôt de boissons</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion de dépôt de boissons</h3>
-        <p class="sol-pb">Casiers, emballages consignés et crédits clients qui ne tombent jamais juste ?</p>
-        <ul class="sol-feats"><li>Stock par casier ou bouteille</li><li>Emballages consignés</li><li>Ventes en gros et au détail</li><li>Crédits clients</li><li>Approvisionnements fournisseurs</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media" data-icon="🎓">
-          <img loading="lazy" src="images/solutions/ecole-1.jpg" class="sol-img sol-on" alt="Gestion d'établissement scolaire" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/ecole-2.jpg" class="sol-img" alt="Gestion d'établissement scolaire" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🎓</span><span class="sol-tag">École</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion d'établissement scolaire</h3>
-        <p class="sol-pb">Inscriptions, scolarités et bulletins qui prennent des semaines à préparer ?</p>
-        <ul class="sol-feats"><li>Inscriptions des élèves</li><li>Scolarité et paiements</li><li>Notes et bulletins</li><li>Emplois du temps</li><li>Suivi des absences</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27%C3%A9tablissement%20scolaire%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media" data-icon="📚">
-          <img loading="lazy" src="images/solutions/formation-1.jpg" class="sol-img sol-on" alt="Gestion de centre de formation" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/formation-2.jpg" class="sol-img" alt="Gestion de centre de formation" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">📚</span><span class="sol-tag">Centre de formation</span></div>
-        </div>
-        <div class="sol-body">
-        <h3>Gestion de centre de formation</h3>
-        <p class="sol-pb">Apprenants, sessions et paiements par tranches difficiles à suivre ?</p>
-        <ul class="sol-feats"><li>Apprenants et sessions</li><li>Paiements par tranches</li><li>Feuilles de présence</li><li>Attestations et certificats</li><li>Tableau de bord du directeur</li></ul>
-        <div class="sol-foot">
-          <span class="sol-price">Sur devis</span>
-          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20centre%20de%20formation%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
-        </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="sol-steps">
-      <div><b>1</b><span><strong>Démo gratuite</strong>Nous vous présentons le logiciel adapté à votre métier.</span></div>
-      <div><b>2</b><span><strong>Personnalisation</strong>Votre logo, vos produits, vos tarifs, vos habitudes.</span></div>
-      <div><b>3</b><span><strong>Installation &amp; formation</strong>Sur vos postes, avec votre équipe.</span></div>
-      <div><b>4</b><span><strong>Suivi</strong>Assistance et mises à jour après la livraison.</span></div>
-    </div>
-    <p class="sol-other">Votre métier n'est pas dans la liste ? <a href="#contact">Parlez-nous de votre besoin</a>, nous développons aussi des logiciels sur mesure.</p>
-  </div>
-</section>
 
 <!-- PARALLAX SÉPARATRICE 2 -->
 <section class="parallax" style="background-image:url('images/para.jpg');">
@@ -1481,10 +1365,6 @@ function initSvcCarousels(){
   });
 }
 initSvcCarousels();
-setInterval(()=>{document.querySelectorAll('.sol-media').forEach(m=>{
-  const imgs=[...m.querySelectorAll('.sol-img')];if(imgs.length<2)return;
-  const i=imgs.findIndex(x=>x.classList.contains('sol-on'));
-  imgs[i<0?0:i].classList.remove('sol-on');imgs[(i+1)%imgs.length].classList.add('sol-on');});},3500);
 
 // ==== FAQ TOGGLE ====
 function toggleFaq(el){
