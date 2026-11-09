@@ -59,6 +59,20 @@ nav .burger span{display:block;width:24px;height:2px;background:#fff;border-radi
 nav .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 nav .burger.open span:nth-child(2){opacity:0;}
 nav .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-links-wrap{display:flex;align-items:center;gap:1.6rem;}
+@media(max-width:1250px){nav .nav-links{gap:1.2rem;} nav .nav-links a{font-size:.85rem;}}
+@media(max-width:1120px){
+  .nav-links-wrap{display:none;}
+  nav .burger{display:flex;}
+  nav.mobile-open .nav-links-wrap{
+    display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:100%;left:0;right:0;
+    background:rgba(10,10,20,.97);backdrop-filter:blur(20px);
+    padding:1rem 0;border-top:1px solid rgba(255,255,255,.1);
+  }
+  nav.mobile-open .nav-links{flex-direction:column;gap:0;}
+  nav.mobile-open .nav-links a{display:block;padding:.9rem 2rem;border-bottom:1px solid rgba(255,255,255,.05);}
+  nav.mobile-open .nav-cta{margin:1rem 2rem;display:block;text-align:center;}
+}
 @media(max-width:768px){
   .nav-links-wrap{display:none;}
   .burger{display:flex;}
@@ -568,6 +582,78 @@ select{
   }
 }
 
+
+/* SOLUTIONS LOGICIELLES */
+#solutions{background:#0d0d16;color:#fff;padding:6rem 5%;}
+.sol-inner{max-width:1140px;margin:0 auto;}
+.sol-header{text-align:center;max-width:760px;margin:0 auto 3rem;}
+.sol-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
+.sol-header h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 1rem;}
+.sol-header p{color:rgba(255,255,255,.68);}
+.sol-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;
+  background:linear-gradient(135deg,rgba(255,102,0,.16),rgba(255,102,0,.03));
+  border:1px solid rgba(255,102,0,.35);border-radius:20px;padding:2.5rem;margin-bottom:2rem;}
+.sol-flag{display:inline-block;background:var(--accent);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
+.sol-featured h3{font-size:1.6rem;font-weight:800;margin-bottom:.6rem;}
+.sol-pb{color:rgba(255,255,255,.72);font-size:.92rem;margin-bottom:1rem;}
+.sol-feats{list-style:none;margin:0 0 1rem;padding:0;}
+.sol-feats li{position:relative;padding-left:1.5rem;font-size:.88rem;margin-bottom:.35rem;color:rgba(255,255,255,.9);}
+.sol-feats li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800;}
+.sol-feats-2{display:grid;grid-template-columns:1fr 1fr;column-gap:1rem;}
+.sol-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem;}
+.sol-badges span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.sol-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;}
+.sol-note{font-size:.8rem;color:rgba(255,255,255,.55);flex:1;min-width:200px;}
+.sol-btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:.6rem 1.2rem;border-radius:50px;transition:all .3s;white-space:nowrap;}
+.sol-btn:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.sol-btn-lg{font-size:.95rem;padding:.85rem 1.8rem;box-shadow:0 6px 24px rgba(255,102,0,.35);}
+.mock{background:#fff;color:#111;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);font-size:.82rem;}
+.mock-bar{display:flex;align-items:center;gap:6px;background:#1b1b2a;color:#fff;padding:.6rem .9rem;}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:#555;display:block;}
+.mock-bar i:first-child{background:var(--accent);}
+.mock-bar b{margin-left:.5rem;font-weight:600;font-size:.78rem;}
+.mock-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;padding:1rem;}
+.mock-kpis div{background:#f5f5f8;border-radius:10px;padding:.6rem;}
+.mock-kpis small{display:block;color:#777;font-size:.68rem;}
+.mock-kpis strong{font-size:1rem;}
+.mock-kpis .warn{color:#d14b00;}
+.mock-rows{padding:0 1rem 1rem;}
+.mock-rows div{display:grid;grid-template-columns:1fr auto 80px;gap:.8rem;padding:.45rem 0;border-bottom:1px solid #eee;}
+.mock-rows div span:last-child{text-align:right;}
+.mock-rows .tot{border-bottom:none;font-weight:800;color:var(--accent-dark);}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.sol-card{display:flex;flex-direction:column;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.6rem;transition:all .3s;}
+.sol-card:hover{border-color:rgba(255,102,0,.6);transform:translateY(-6px);background:rgba(255,255,255,.07);}
+.sol-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
+.sol-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:rgba(255,102,0,.15);}
+.sol-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);}
+.sol-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;}
+.sol-card .sol-pb{font-size:.85rem;font-style:italic;}
+.sol-card .sol-feats{flex:1;}
+.sol-foot{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);}
+.sol-price{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.6);}
+.sol-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
+.sol-steps div{display:flex;gap:.8rem;align-items:flex-start;}
+.sol-steps b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.sol-steps span{font-size:.82rem;color:rgba(255,255,255,.65);}
+.sol-steps strong{display:block;color:#fff;font-size:.92rem;}
+.sol-other{text-align:center;margin-top:2.5rem;color:rgba(255,255,255,.7);}
+.sol-other a{color:var(--accent);font-weight:700;}
+.svc-teaser{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;text-align:left;
+  background:linear-gradient(135deg,rgba(255,102,0,.25),rgba(255,102,0,.08));border:1px solid rgba(255,102,0,.5);border-radius:12px;padding:1.2rem 1.4rem;}
+.svc-teaser strong{display:block;font-size:1rem;}
+.svc-teaser span{font-size:.85rem;color:rgba(255,255,255,.75);}
+@media(max-width:900px){
+  .sol-featured{grid-template-columns:1fr;padding:1.6rem;}
+  .sol-grid{grid-template-columns:repeat(2,1fr);}
+  .sol-steps{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  #solutions{padding:4rem 1rem;}
+  .sol-grid,.sol-steps,.sol-feats-2{grid-template-columns:1fr;}
+  .sol-featured-vis{display:none;}
+  .sol-btn-lg{width:100%;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -578,6 +664,7 @@ select{
       <li><a href="#hero" class="active">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
       <li><a href="#gallery">Galerie</a></li>
       <li><a href="#team">Équipe</a></li>
       <li><a href="#testimonials">Témoignages</a></li>
@@ -614,7 +701,7 @@ select{
 <section id="about">
   <div class="about-img"><img loading="lazy" src="images/apropos/apropos.jpg" alt="Notre histoire"></div>
   <div class="about-text">
-    <h2 style="color:#111;font-size:2rem;margin-bottom:.5rem;">A Propos</h2>
+    <h2 style="color:#111;font-size:2rem;margin-bottom:.5rem;">À propos</h2>
     <p style="color:#333;font-size:1rem;line-height:1.6;">
  IT Services & Creative est une agence innovante alliant expertise en informatique et services créatifs.
  Nous offrons des solutions personnalisées adaptées à chaque besoin, 
@@ -647,6 +734,12 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
         </button>
         <div class="acc-panel">
           <div class="svc-grid">
+            <div class="svc-teaser">
+              <div><strong>🧩 Logiciels de gestion prêts à l'emploi</strong>
+              <span>Boutique, clinique, cabinet d'huissier, agence immobilière, dépôt de boissons, école, centre de formation…</span></div>
+              <a href="#solutions" class="sol-btn">Voir nos solutions</a>
+            </div>
+
 
             <!-- Carte 1 : Site Vitrine -->
             <div class="svc-card">
@@ -920,6 +1013,139 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
   </div>
 </section>
 
+
+<!-- SOLUTIONS LOGICIELLES -->
+<section id="solutions">
+  <div class="sol-inner">
+    <div class="sol-header">
+      <span class="sol-eyebrow">Développement d'applications</span>
+      <h2>Des logiciels de gestion déjà conçus pour votre métier</h2>
+      <p>Nous ne partons pas de zéro : nos solutions sont déjà développées et éprouvées. Nous les adaptons à votre structure, nous les installons et nous formons votre équipe.</p>
+    </div>
+
+    <article class="sol-featured">
+      <div class="sol-featured-txt">
+        <span class="sol-flag">⭐ Produit phare</span>
+        <h3>🛒 Gestion de boutique &amp; commerce</h3>
+        <p class="sol-pb">Vous ne savez jamais exactement ce qui reste en stock ni ce que la caisse a encaissé ? Notre logiciel de caisse et de stock vous donne la réponse en un clic.</p>
+        <ul class="sol-feats sol-feats-2">
+          <li>Caisse rapide et ticket thermique</li>
+          <li>Stock et alertes de rupture</li>
+          <li>Tableau de bord des ventes</li>
+          <li>Accès du gérant depuis son PC (réseau Wi-Fi local)</li>
+        </ul>
+        <div class="sol-badges">
+          <span>💻 Windows</span><span>📱 Android</span><span>📴 100 % hors ligne</span><span>🧾 Impression thermique</span>
+        </div>
+        <div class="sol-cta-row">
+          <a class="sol-btn sol-btn-lg" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20boutique%20%C2%BB." target="_blank" rel="noopener noreferrer">Essayer gratuitement 21 jours</a>
+          <span class="sol-note">Idéal pour : boutiques, supérettes, quincailleries, pharmacies, magasins.</span>
+        </div>
+      </div>
+      <div class="sol-featured-vis" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-bar"><i></i><i></i><i></i><b>Caisse — ITSC</b></div>
+          <div class="mock-kpis"><div><small>Ventes du jour</small><strong>248 500 F</strong></div><div><small>Tickets</small><strong>63</strong></div><div><small>Ruptures</small><strong class="warn">4</strong></div></div>
+          <div class="mock-rows">
+            <div><span>Riz 25 kg</span><span>x2</span><span>36 000</span></div>
+            <div><span>Huile 5 L</span><span>x3</span><span>19 500</span></div>
+            <div><span>Sucre 1 kg</span><span>x6</span><span>4 800</span></div>
+            <div class="tot"><span>Total</span><span></span><span>60 300 F</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="sol-grid">
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">⚖️</span>
+          <span class="sol-tag">Cabinet d'huissier</span>
+        </div>
+        <h3>Gestion de cabinet d'huissier</h3>
+        <p class="sol-pb">Vos dossiers, actes et délais sont éparpillés entre classeurs et fichiers Excel ?</p>
+        <ul class="sol-feats"><li>Dossiers et actes centralisés</li><li>Suivi des significations et procédures</li><li>Échéancier des audiences et délais</li><li>Clients, débiteurs et recouvrements</li><li>Facturation et encaissements</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20cabinet%20d%27huissier%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">🏠</span>
+          <span class="sol-tag">Agence immobilière</span>
+        </div>
+        <h3>Gestion d'agence immobilière</h3>
+        <p class="sol-pb">Difficile de suivre les loyers, les impayés et les contrats de chaque bien ?</p>
+        <ul class="sol-feats"><li>Biens à louer ou à vendre</li><li>Propriétaires et locataires</li><li>Suivi des loyers et des impayés</li><li>Contrats et quittances</li><li>Calcul des commissions</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27agence%20immobili%C3%A8re%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">🏥</span>
+          <span class="sol-tag">Clinique</span>
+        </div>
+        <h3>Gestion de clinique</h3>
+        <p class="sol-pb">Fiches patients papier, files d'attente, caisse difficile à contrôler ?</p>
+        <ul class="sol-feats"><li>Dossiers patients</li><li>Rendez-vous et consultations</li><li>Ordonnances</li><li>Facturation et caisse</li><li>Pharmacie et stock de médicaments</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20clinique%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">🍾</span>
+          <span class="sol-tag">Dépôt de boissons</span>
+        </div>
+        <h3>Gestion de dépôt de boissons</h3>
+        <p class="sol-pb">Casiers, emballages consignés et crédits clients qui ne tombent jamais juste ?</p>
+        <ul class="sol-feats"><li>Stock par casier ou bouteille</li><li>Emballages consignés</li><li>Ventes en gros et au détail</li><li>Crédits clients</li><li>Approvisionnements fournisseurs</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">🎓</span>
+          <span class="sol-tag">École</span>
+        </div>
+        <h3>Gestion d'établissement scolaire</h3>
+        <p class="sol-pb">Inscriptions, scolarités et bulletins qui prennent des semaines à préparer ?</p>
+        <ul class="sol-feats"><li>Inscriptions des élèves</li><li>Scolarité et paiements</li><li>Notes et bulletins</li><li>Emplois du temps</li><li>Suivi des absences</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27%C3%A9tablissement%20scolaire%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+      <article class="sol-card">
+        <div class="sol-head">
+          <span class="sol-icon" aria-hidden="true">📚</span>
+          <span class="sol-tag">Centre de formation</span>
+        </div>
+        <h3>Gestion de centre de formation</h3>
+        <p class="sol-pb">Apprenants, sessions et paiements par tranches difficiles à suivre ?</p>
+        <ul class="sol-feats"><li>Apprenants et sessions</li><li>Paiements par tranches</li><li>Feuilles de présence</li><li>Attestations et certificats</li><li>Tableau de bord du directeur</li></ul>
+        <div class="sol-foot">
+          <span class="sol-price">Sur devis</span>
+          <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20centre%20de%20formation%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="sol-steps">
+      <div><b>1</b><span><strong>Démo gratuite</strong>Nous vous présentons le logiciel adapté à votre métier.</span></div>
+      <div><b>2</b><span><strong>Personnalisation</strong>Votre logo, vos produits, vos tarifs, vos habitudes.</span></div>
+      <div><b>3</b><span><strong>Installation &amp; formation</strong>Sur vos postes, avec votre équipe.</span></div>
+      <div><b>4</b><span><strong>Suivi</strong>Assistance et mises à jour après la livraison.</span></div>
+    </div>
+    <p class="sol-other">Votre métier n'est pas dans la liste ? <a href="#contact">Parlez-nous de votre besoin</a>, nous développons aussi des logiciels sur mesure.</p>
+  </div>
+</section>
+
 <!-- PARALLAX SÉPARATRICE 2 -->
 <section class="parallax" style="background-image:url('images/para.jpg');">
   <div class="parallax-content"><h2 style="font-size:2.5rem;">Innovation & Passion</h2></div>
@@ -1117,7 +1343,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2024 IT SERVICES & CREATIVE – Tous droits réservés.</p>
+  <p>&copy; <span id="yr">2026</span> IT SERVICES & CREATIVE – Tous droits réservés.</p>
   <p>team.itsc.228@gmail.com</p>
 </footer>
 
@@ -1128,6 +1354,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
 </div>
 
 <script>
+document.getElementById('yr').textContent=new Date().getFullYear();
 // ==== THEME TOGGLE ====
 (function(){
   const btn=document.querySelector('.toggle-theme');
