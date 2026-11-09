@@ -13,8 +13,12 @@
 <style>
 :root{
   --font:"Poppins",sans-serif;
-  --accent:#ff6600;
-  --accent-dark:#e65c00;
+  --blue:#04A1DF;        /* bleu du logo */
+  --blue-dark:#0479B0;
+  --orange:#F5960B;      /* orange du logo */
+  --orange-dark:#D97C00;
+  --accent:var(--orange);
+  --accent-dark:var(--orange-dark);
   --bg:#ffffff;
   --text:#111111;
 }
@@ -583,77 +587,84 @@ select{
 }
 
 
-/* SOLUTIONS LOGICIELLES */
-#solutions{background:#0d0d16;color:#fff;padding:6rem 5%;}
+/* SOLUTIONS LOGICIELLES — couleurs du logo (bleu #04A1DF, orange #F5960B) */
+#solutions{background:linear-gradient(180deg,#f2f9fd 0%,#ffffff 100%);color:#0f2133;padding:6rem 5%;}
 .sol-inner{max-width:1140px;margin:0 auto;}
 .sol-header{text-align:center;max-width:760px;margin:0 auto 3rem;}
-.sol-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
-.sol-header h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 1rem;}
-.sol-header p{color:rgba(255,255,255,.68);}
-.sol-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;
-  background:linear-gradient(100deg,rgba(13,13,22,.97) 35%,rgba(13,13,22,.82)),linear-gradient(135deg,rgba(255,102,0,.16),rgba(255,102,0,.03)),url('images/solutions/boutique.jpg') center/cover;
-  border:1px solid rgba(255,102,0,.35);border-radius:20px;padding:2.5rem;margin-bottom:2rem;}
-.sol-flag{display:inline-block;background:var(--accent);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
+.sol-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange-dark);}
+.sol-header h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 1rem;color:#0f2133;}
+.sol-header h2 em{font-style:normal;color:var(--blue);}
+.sol-header p{color:#55657a;}
+.sol-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;color:#fff;
+  background:linear-gradient(110deg,rgba(3,95,143,.96) 0%,rgba(4,140,200,.90) 60%,rgba(4,161,223,.80) 100%),url('images/solutions/boutique.jpg') center/cover,#047fb5;
+  border-radius:22px;padding:2.6rem;margin-bottom:2.2rem;box-shadow:0 20px 50px rgba(4,121,176,.28);position:relative;overflow:hidden;}
+.sol-featured::after{content:'';position:absolute;right:-120px;top:-140px;width:520px;height:260px;border-radius:50%;
+  border-bottom:8px solid var(--orange);transform:rotate(-12deg);opacity:.85;pointer-events:none;z-index:0;}
+.sol-featured>*{position:relative;z-index:1;}
+.sol-flag{display:inline-block;background:var(--orange);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
 .sol-featured h3{font-size:1.6rem;font-weight:800;margin-bottom:.6rem;}
-.sol-pb{color:rgba(255,255,255,.72);font-size:.92rem;margin-bottom:1rem;}
+.sol-featured .sol-pb{color:rgba(255,255,255,.9);}
+.sol-pb{color:#55657a;font-size:.92rem;margin-bottom:1rem;}
 .sol-feats{list-style:none;margin:0 0 1rem;padding:0;}
-.sol-feats li{position:relative;padding-left:1.5rem;font-size:.88rem;margin-bottom:.35rem;color:rgba(255,255,255,.9);}
-.sol-feats li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800;}
+.sol-feats li{position:relative;padding-left:1.5rem;font-size:.88rem;margin-bottom:.35rem;color:#26384c;}
+.sol-feats li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:800;}
+.sol-featured .sol-feats li{color:#fff;}
+.sol-featured .sol-feats li::before{color:var(--orange);}
 .sol-feats-2{display:grid;grid-template-columns:1fr 1fr;column-gap:1rem;}
 .sol-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem;}
-.sol-badges span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.sol-badges span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);}
 .sol-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;}
-.sol-note{font-size:.8rem;color:rgba(255,255,255,.55);flex:1;min-width:200px;}
-.sol-btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:.6rem 1.2rem;border-radius:50px;transition:all .3s;white-space:nowrap;}
-.sol-btn:hover{background:var(--accent-dark);transform:translateY(-2px);}
-.sol-btn-lg{font-size:.95rem;padding:.85rem 1.8rem;box-shadow:0 6px 24px rgba(255,102,0,.35);}
-.mock{background:#fff;color:#111;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);font-size:.82rem;}
-.mock-bar{display:flex;align-items:center;gap:6px;background:#1b1b2a;color:#fff;padding:.6rem .9rem;}
-.mock-bar i{width:9px;height:9px;border-radius:50%;background:#555;display:block;}
-.mock-bar i:first-child{background:var(--accent);}
+.sol-note{font-size:.8rem;color:rgba(255,255,255,.8);flex:1;min-width:200px;}
+.sol-btn{display:inline-block;background:var(--blue-dark);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:.6rem 1.2rem;border-radius:50px;transition:all .3s;white-space:nowrap;}
+.sol-btn:hover{background:#035f8f;transform:translateY(-2px);}
+.sol-btn-lg{font-size:.95rem;padding:.85rem 1.8rem;background:var(--orange);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);}
+.sol-btn-lg:hover{background:var(--orange-dark);}
+.mock{background:#fff;color:#111;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,30,60,.35);font-size:.82rem;}
+.mock-bar{display:flex;align-items:center;gap:6px;background:#0f2133;color:#fff;padding:.6rem .9rem;}
+.mock-bar i{width:9px;height:9px;border-radius:50%;background:#556;display:block;}
+.mock-bar i:first-child{background:var(--orange);}
+.mock-bar i:nth-child(2){background:var(--blue);}
 .mock-bar b{margin-left:.5rem;font-weight:600;font-size:.78rem;}
 .mock-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;padding:1rem;}
-.mock-kpis div{background:#f5f5f8;border-radius:10px;padding:.6rem;}
-.mock-kpis small{display:block;color:#777;font-size:.68rem;}
-.mock-kpis strong{font-size:1rem;}
-.mock-kpis .warn{color:#d14b00;}
+.mock-kpis div{background:#eef7fc;border-radius:10px;padding:.6rem;}
+.mock-kpis small{display:block;color:#5b6b7d;font-size:.68rem;}
+.mock-kpis strong{font-size:1rem;color:#0f2133;}
+.mock-kpis .warn{color:#d97c00;}
 .mock-rows{padding:0 1rem 1rem;}
-.mock-rows div{display:grid;grid-template-columns:1fr auto 80px;gap:.8rem;padding:.45rem 0;border-bottom:1px solid #eee;}
+.mock-rows div{display:grid;grid-template-columns:1fr auto 80px;gap:.8rem;padding:.45rem 0;border-bottom:1px solid #eef1f4;}
 .mock-rows div span:last-child{text-align:right;}
-.mock-rows .tot{border-bottom:none;font-weight:800;color:var(--accent-dark);}
-.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
-.sol-card{display:flex;flex-direction:column;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:all .3s;}
+.mock-rows .tot{border-bottom:none;font-weight:800;color:var(--blue-dark);}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+.sol-card{display:flex;flex-direction:column;background:#fff;border:1px solid #e3eef5;border-radius:18px;overflow:hidden;
+  box-shadow:0 6px 24px rgba(15,33,51,.06);transition:all .3s;}
+.sol-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(4,121,176,.16);border-color:rgba(4,161,223,.45);}
 .sol-body{display:flex;flex-direction:column;flex:1;padding:1.4rem 1.6rem 1.6rem;}
-.sol-media{position:relative;height:190px;overflow:hidden;
-  background:radial-gradient(circle at 75% 30%,rgba(255,102,0,.55),transparent 60%),linear-gradient(135deg,#2a1608,#14141f);}
-.sol-media::before{content:attr(data-icon);position:absolute;right:-10px;top:-18px;font-size:9rem;opacity:.18;line-height:1;}
+.sol-media{position:relative;height:200px;overflow:hidden;background:linear-gradient(135deg,#d7eef9,#eef7fc);}
 .sol-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s,transform .6s;}
 .sol-img.sol-on{opacity:1;}
-.sol-card:hover .sol-img{transform:scale(1.06);}
-.sol-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,18,.92) 0%,rgba(10,10,18,.15) 60%,transparent);z-index:1;}
-.sol-media-cap{position:absolute;left:1.2rem;right:1.2rem;bottom:1rem;z-index:2;display:flex;align-items:center;gap:.7rem;}
-.sol-media-cap .sol-icon{width:44px;height:44px;font-size:1.35rem;background:var(--accent);}
-.sol-media-cap .sol-tag{color:#fff;}
-.sol-card:hover{border-color:rgba(255,102,0,.6);transform:translateY(-6px);background:rgba(255,255,255,.07);}
-.sol-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
-.sol-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:rgba(255,102,0,.15);}
-.sol-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);}
-.sol-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;}
+.sol-card:hover .sol-img{transform:scale(1.05);}
+.sol-media.has-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,33,51,.55) 0%,transparent 55%);z-index:1;}
+.sol-media-cap{position:absolute;left:1.1rem;bottom:1rem;z-index:2;display:flex;align-items:center;gap:.6rem;}
+.sol-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.15);}
+.sol-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;background:var(--orange);padding:4px 10px;border-radius:20px;}
+.sol-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:#0f2133;}
 .sol-card .sol-pb{font-size:.85rem;font-style:italic;}
 .sol-card .sol-feats{flex:1;}
-.sol-foot{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);}
-.sol-price{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.6);}
-.sol-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;}
+.sol-foot{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding-top:1rem;border-top:1px solid #eef1f4;}
+.sol-price{font-size:.8rem;font-weight:700;color:var(--orange-dark);}
+.sol-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3.2rem;background:#fff;border:1px solid #e3eef5;border-radius:18px;padding:1.6rem;}
 .sol-steps div{display:flex;gap:.8rem;align-items:flex-start;}
-.sol-steps b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
-.sol-steps span{font-size:.82rem;color:rgba(255,255,255,.65);}
-.sol-steps strong{display:block;color:#fff;font-size:.92rem;}
-.sol-other{text-align:center;margin-top:2.5rem;color:rgba(255,255,255,.7);}
-.sol-other a{color:var(--accent);font-weight:700;}
+.sol-steps b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.sol-steps div:nth-child(even) b{background:var(--orange);}
+.sol-steps span{font-size:.82rem;color:#55657a;}
+.sol-steps strong{display:block;color:#0f2133;font-size:.92rem;}
+.sol-other{text-align:center;margin-top:2.5rem;color:#55657a;}
+.sol-other a{color:var(--blue-dark);font-weight:700;}
 .svc-teaser{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;text-align:left;
-  background:linear-gradient(135deg,rgba(255,102,0,.25),rgba(255,102,0,.08));border:1px solid rgba(255,102,0,.5);border-radius:12px;padding:1.2rem 1.4rem;}
+  background:linear-gradient(120deg,#047fb5,#04a1df);border-radius:12px;padding:1.2rem 1.4rem;color:#fff;}
 .svc-teaser strong{display:block;font-size:1rem;}
-.svc-teaser span{font-size:.85rem;color:rgba(255,255,255,.75);}
+.svc-teaser span{font-size:.85rem;color:rgba(255,255,255,.88);}
+.svc-teaser .sol-btn{background:var(--orange);}
 @media(max-width:900px){
   .sol-featured{grid-template-columns:1fr;padding:1.6rem;}
   .sol-grid{grid-template-columns:repeat(2,1fr);}
@@ -1030,7 +1041,7 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
   <div class="sol-inner">
     <div class="sol-header">
       <span class="sol-eyebrow">Développement d'applications</span>
-      <h2>Des logiciels de gestion déjà conçus pour votre métier</h2>
+      <h2>Des logiciels de gestion déjà conçus <em>pour votre métier</em></h2>
       <p>Nous ne partons pas de zéro : nos solutions sont déjà développées et éprouvées. Nous les adaptons à votre structure, nous les installons et nous formons votre équipe.</p>
     </div>
 
@@ -1069,8 +1080,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
     <div class="sol-grid">
       <article class="sol-card">
         <div class="sol-media" data-icon="⚖️">
-          <img loading="lazy" src="images/solutions/huissier-1.jpg" class="sol-img sol-on" alt="Gestion de cabinet d'huissier" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/huissier-2.jpg" class="sol-img" alt="Gestion de cabinet d'huissier" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/huissier-1.jpg" class="sol-img sol-on" alt="Gestion de cabinet d'huissier" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/huissier-2.jpg" class="sol-img" alt="Gestion de cabinet d'huissier" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">⚖️</span><span class="sol-tag">Cabinet d'huissier</span></div>
         </div>
         <div class="sol-body">
@@ -1085,8 +1096,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
       </article>
       <article class="sol-card">
         <div class="sol-media" data-icon="🏠">
-          <img loading="lazy" src="images/solutions/immobilier-1.jpg" class="sol-img sol-on" alt="Gestion d'agence immobilière" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/immobilier-2.jpg" class="sol-img" alt="Gestion d'agence immobilière" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/immobilier-1.jpg" class="sol-img sol-on" alt="Gestion d'agence immobilière" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/immobilier-2.jpg" class="sol-img" alt="Gestion d'agence immobilière" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏠</span><span class="sol-tag">Agence immobilière</span></div>
         </div>
         <div class="sol-body">
@@ -1101,8 +1112,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
       </article>
       <article class="sol-card">
         <div class="sol-media" data-icon="🏥">
-          <img loading="lazy" src="images/solutions/clinique-1.jpg" class="sol-img sol-on" alt="Gestion de clinique" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/clinique-2.jpg" class="sol-img" alt="Gestion de clinique" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/clinique-1.jpg" class="sol-img sol-on" alt="Gestion de clinique" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/clinique-2.jpg" class="sol-img" alt="Gestion de clinique" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏥</span><span class="sol-tag">Clinique</span></div>
         </div>
         <div class="sol-body">
@@ -1117,8 +1128,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
       </article>
       <article class="sol-card">
         <div class="sol-media" data-icon="🍾">
-          <img loading="lazy" src="images/solutions/boissons-1.jpg" class="sol-img sol-on" alt="Gestion de dépôt de boissons" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/boissons-2.jpg" class="sol-img" alt="Gestion de dépôt de boissons" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/boissons-1.jpg" class="sol-img sol-on" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/boissons-2.jpg" class="sol-img" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🍾</span><span class="sol-tag">Dépôt de boissons</span></div>
         </div>
         <div class="sol-body">
@@ -1133,8 +1144,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
       </article>
       <article class="sol-card">
         <div class="sol-media" data-icon="🎓">
-          <img loading="lazy" src="images/solutions/ecole-1.jpg" class="sol-img sol-on" alt="Gestion d'établissement scolaire" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/ecole-2.jpg" class="sol-img" alt="Gestion d'établissement scolaire" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/ecole-1.jpg" class="sol-img sol-on" alt="Gestion d'établissement scolaire" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/ecole-2.jpg" class="sol-img" alt="Gestion d'établissement scolaire" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🎓</span><span class="sol-tag">École</span></div>
         </div>
         <div class="sol-body">
@@ -1149,8 +1160,8 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
       </article>
       <article class="sol-card">
         <div class="sol-media" data-icon="📚">
-          <img loading="lazy" src="images/solutions/formation-1.jpg" class="sol-img sol-on" alt="Gestion de centre de formation" onerror="this.remove()">
-          <img loading="lazy" src="images/solutions/formation-2.jpg" class="sol-img" alt="Gestion de centre de formation" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/formation-1.jpg" class="sol-img sol-on" alt="Gestion de centre de formation" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/formation-2.jpg" class="sol-img" alt="Gestion de centre de formation" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">📚</span><span class="sol-tag">Centre de formation</span></div>
         </div>
         <div class="sol-body">
