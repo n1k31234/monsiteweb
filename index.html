@@ -587,35 +587,14 @@ select{
 }
 
 
-/* SOLUTIONS LOGICIELLES — sobre */
-#solutions{background:#fff;color:#1d2733;padding:5.5rem 5%;}
-.sol-inner{max-width:1180px;margin:0 auto;}
-.sol-header{max-width:640px;margin:0 auto 2.8rem;text-align:center;}
-.sol-eyebrow{font-size:.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange-dark);}
-.sol-header h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.5rem 0 .8rem;color:#1d2733;}
-.sol-header p{color:#5c6773;}
-.sol-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.6rem;}
-.sol-card{display:flex;flex-direction:column;background:#fff;border:1px solid #eceff2;border-radius:14px;overflow:hidden;transition:box-shadow .3s;}
-.sol-card:hover{box-shadow:0 10px 30px rgba(29,39,51,.08);}
-.sol-media{position:relative;aspect-ratio:3/2;background:#f1f4f6;overflow:hidden;}
-.sol-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease;}
-.sol-img.sol-on{opacity:1;}
-.sol-body{display:flex;flex-direction:column;flex:1;padding:1.2rem 1.3rem 1.3rem;}
-.sol-tag{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--orange-dark);}
-.sol-card h3{font-size:1.1rem;font-weight:700;margin:.2rem 0 .5rem;color:#1d2733;}
-.sol-card p{font-size:.88rem;color:#5c6773;margin-bottom:.8rem;}
-.sol-card ul{list-style:none;padding:0;margin:0 0 1rem;flex:1;}
-.sol-card li{position:relative;padding-left:1rem;font-size:.85rem;color:#33404d;margin-bottom:.3rem;}
-.sol-card li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--blue);}
-.sol-foot{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;padding-top:.8rem;border-top:1px solid #eceff2;}
-.sol-foot a{color:var(--blue-dark);font-weight:600;font-size:.88rem;text-decoration:none;}
-.sol-foot a:hover{text-decoration:underline;}
-.sol-extra{font-size:.78rem;font-weight:600;color:var(--orange-dark);}
-.sol-card-custom{background:#f3f9fc;border-color:#d9edf6;justify-content:center;}
-.sol-card-custom .sol-body{justify-content:center;}
-.sol-other{text-align:center;margin-top:2.4rem;color:#5c6773;font-size:.92rem;}
-.sol-other a{color:var(--blue-dark);font-weight:600;}
-@media(max-width:600px){#solutions{padding:4rem 1rem;}}
+/* SOLUTIONS LOGICIELLES — même style que Nos Services */
+#solutions{position:relative;padding:6rem 5%;background:#2b2b2b;}
+#solutions::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35);}
+#solutions .inner{position:relative;z-index:1;max-width:960px;margin:0 auto;color:#fff;text-align:center;}
+#solutions h2{margin-bottom:.5rem;font-size:2rem;}
+#solutions .inner>p{margin-bottom:3rem;color:rgba(255,255,255,.65);}
+#solutions .svc-grid{border-top:1px solid rgba(255,255,255,.1);border-radius:12px;}
+@media(max-width:768px){#solutions{padding:4rem 1rem;}}
 </style>
 </head>
 <body>
@@ -683,113 +662,143 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
 
 <!-- SOLUTIONS LOGICIELLES -->
 <section id="solutions">
-  <div class="sol-inner">
-    <div class="sol-header">
-      <span class="sol-eyebrow">Nos logiciels de gestion</span>
-      <h2>Des outils simples, pensés pour votre quotidien</h2>
-      <p>Chaque logiciel est déjà prêt. Nous l'adaptons à votre activité, nous l'installons chez vous et nous formons votre équipe.</p>
-    </div>
-    <div class="sol-grid">
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/30020992/pexels-photo-30020992.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="ITSC Gestion">
-          <img loading="lazy" src="images/solutions/xprinter-xp-t80a.jpg" class="sol-img" alt="ITSC Gestion">
-          <img loading="lazy" src="https://images.pexels.com/photos/30688912/pexels-photo-30688912.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="ITSC Gestion">
+  <div class="inner">
+    <h2>Nos Logiciels de Gestion</h2>
+    <p>Des solutions prêtes à l'emploi, adaptées à votre métier</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/30020992/pexels-photo-30020992.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="ITSC Gestion">
+          <img loading="lazy" src="images/solutions/xprinter-xp-t80a.jpg" class="svc-img" alt="ITSC Gestion">
+          <img loading="lazy" src="https://images.pexels.com/photos/30688912/pexels-photo-30688912.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="ITSC Gestion">
+          <span class="svc-price">Essai gratuit 21 jours</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Commerce</span>
-          <h3>ITSC Gestion</h3>
-          <p>Pour le commerçant, de la petite boutique au supermarché, qui veut savoir chaque soir ce qu'il a vendu et ce qui reste en rayon.</p>
-          <ul><li>Caisse et tickets 80 mm sur imprimante Xprinter XP-T80A</li><li>Stock et alertes de rupture</li><li>Fonctionne sans internet, sur PC et Android</li></ul>
-          <div class="sol-foot"><span class="sol-extra">Essai gratuit 21 jours</span><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20ITSC%20Gestion%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>🛒 ITSC Gestion</h4>
+          <p style="color:#333;text-align:left;">Gérez votre boutique ou votre supermarché simplement.<br>
+              ✅ Caisse &amp; tickets 80 mm (Xprinter XP-T80A)<br>
+              ✅ Stock et alertes de rupture<br>
+              ✅ Fonctionne sans internet<br>
+              ✅ Version PC &amp; Android<br>
+            <em>Idéal pour : petites boutiques, supermarchés, quincailleries.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20ITSC%20Gestion%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/7875843/pexels-photo-7875843.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Cabinet d'huissier">
-          <img loading="lazy" src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Cabinet d'huissier">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/7875843/pexels-photo-7875843.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel cabinet d'huissier">
+          <img loading="lazy" src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel cabinet d'huissier">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Justice</span>
-          <h3>Cabinet d'huissier</h3>
-          <p>Pour l'huissier qui veut retrouver un dossier en quelques secondes et ne plus jamais manquer un délai.</p>
-          <ul><li>Dossiers, actes et significations</li><li>Échéancier des audiences et délais</li><li>Facturation et recouvrements</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Cabinet%20d%27huissier%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>⚖️ Cabinet d'huissier</h4>
+          <p style="color:#333;text-align:left;">Retrouvez chaque dossier en quelques secondes.<br>
+              ✅ Dossiers, actes et significations<br>
+              ✅ Échéancier des audiences et délais<br>
+              ✅ Clients et débiteurs<br>
+              ✅ Facturation et recouvrements<br>
+            <em>Idéal pour : huissiers et commissaires de justice.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20cabinet%20d%27huissier%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/33052786/pexels-photo-33052786.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Agence immobilière">
-          <img loading="lazy" src="https://images.pexels.com/photos/31015267/pexels-photo-31015267.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Agence immobilière">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/33052786/pexels-photo-33052786.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel agence immobilière">
+          <img loading="lazy" src="https://images.pexels.com/photos/31015267/pexels-photo-31015267.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel agence immobilière">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Immobilier</span>
-          <h3>Agence immobilière</h3>
-          <p>Pour l'agence qui gère des dizaines de biens et veut suivre chaque loyer sans cahier.</p>
-          <ul><li>Biens, propriétaires et locataires</li><li>Loyers, impayés et quittances</li><li>Contrats et commissions</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Agence%20immobili%C3%A8re%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>🏠 Agence immobilière</h4>
+          <p style="color:#333;text-align:left;">Suivez vos biens et vos loyers sans cahier.<br>
+              ✅ Biens à louer ou à vendre<br>
+              ✅ Propriétaires et locataires<br>
+              ✅ Loyers, impayés et quittances<br>
+              ✅ Contrats et commissions<br>
+            <em>Idéal pour : agences immobilières, gestionnaires de biens.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20agence%20immobili%C3%A8re%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Clinique">
-          <img loading="lazy" src="https://images.pexels.com/photos/6097758/pexels-photo-6097758.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Clinique">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel clinique">
+          <img loading="lazy" src="https://images.pexels.com/photos/6097758/pexels-photo-6097758.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel clinique">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Santé</span>
-          <h3>Clinique</h3>
-          <p>Pour la clinique qui veut un accueil plus fluide et une caisse enfin maîtrisée.</p>
-          <ul><li>Dossiers patients et consultations</li><li>Rendez-vous et ordonnances</li><li>Facturation, caisse et pharmacie</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Clinique%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>🏥 Clinique</h4>
+          <p style="color:#333;text-align:left;">Un accueil fluide et une caisse maîtrisée.<br>
+              ✅ Dossiers patients<br>
+              ✅ Rendez-vous et consultations<br>
+              ✅ Ordonnances<br>
+              ✅ Facturation, caisse et pharmacie<br>
+            <em>Idéal pour : cliniques, cabinets médicaux, centres de santé.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20clinique%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/17364034/pexels-photo-17364034.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Dépôt de boissons">
-          <img loading="lazy" src="https://images.pexels.com/photos/5881421/pexels-photo-5881421.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Dépôt de boissons">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/17364034/pexels-photo-17364034.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel dépôt de boissons">
+          <img loading="lazy" src="https://images.pexels.com/photos/5881421/pexels-photo-5881421.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel dépôt de boissons">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Distribution</span>
-          <h3>Dépôt de boissons</h3>
-          <p>Pour le dépositaire qui veut que les casiers, les emballages et les crédits tombent juste.</p>
-          <ul><li>Stock par casier ou bouteille</li><li>Emballages consignés</li><li>Crédits clients et fournisseurs</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20D%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>🍾 Dépôt de boissons</h4>
+          <p style="color:#333;text-align:left;">Casiers, emballages et crédits qui tombent juste.<br>
+              ✅ Stock par casier ou bouteille<br>
+              ✅ Emballages consignés<br>
+              ✅ Ventes en gros et au détail<br>
+              ✅ Crédits clients et fournisseurs<br>
+            <em>Idéal pour : dépôts de boissons, grossistes, distributeurs.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/31820972/pexels-photo-31820972.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Établissement scolaire">
-          <img loading="lazy" src="https://images.pexels.com/photos/5905919/pexels-photo-5905919.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Établissement scolaire">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/31820972/pexels-photo-31820972.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel établissement scolaire">
+          <img loading="lazy" src="https://images.pexels.com/photos/5905919/pexels-photo-5905919.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel établissement scolaire">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Éducation</span>
-          <h3>Établissement scolaire</h3>
-          <p>Pour l'école qui veut des inscriptions simples et des bulletins prêts à temps.</p>
-          <ul><li>Inscriptions et scolarité</li><li>Notes et bulletins</li><li>Emplois du temps et absences</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20%C3%89tablissement%20scolaire%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>🎓 Établissement scolaire</h4>
+          <p style="color:#333;text-align:left;">Inscriptions simples et bulletins prêts à temps.<br>
+              ✅ Inscriptions des élèves<br>
+              ✅ Scolarité et paiements<br>
+              ✅ Notes et bulletins<br>
+              ✅ Emplois du temps et absences<br>
+            <em>Idéal pour : écoles, collèges, lycées.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20%C3%A9tablissement%20scolaire%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card">
-        <div class="sol-media">
-          <img loading="lazy" src="https://images.pexels.com/photos/5940713/pexels-photo-5940713.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img sol-on" alt="Centre de formation">
-          <img loading="lazy" src="https://images.pexels.com/photos/5905751/pexels-photo-5905751.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop" class="sol-img" alt="Centre de formation">
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-img-wrap">
+          <img loading="lazy" src="https://images.pexels.com/photos/5940713/pexels-photo-5940713.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Logiciel centre de formation">
+          <img loading="lazy" src="https://images.pexels.com/photos/5905751/pexels-photo-5905751.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Logiciel centre de formation">
+          <span class="svc-price">Sur devis</span>
         </div>
-        <div class="sol-body">
-          <span class="sol-tag">Formation</span>
-          <h3>Centre de formation</h3>
-          <p>Pour le centre qui veut suivre ses apprenants, leurs paiements et leurs présences.</p>
-          <ul><li>Apprenants et sessions</li><li>Paiements par tranches</li><li>Attestations et certificats</li></ul>
-          <div class="sol-foot"><a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Centre%20de%20formation%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo →</a></div>
+        <div class="svc-body">
+          <h4>📚 Centre de formation</h4>
+          <p style="color:#333;text-align:left;">Apprenants, paiements et présences sous contrôle.<br>
+              ✅ Apprenants et sessions<br>
+              ✅ Paiements par tranches<br>
+              ✅ Feuilles de présence<br>
+              ✅ Attestations et certificats<br>
+            <em>Idéal pour : centres de formation, instituts.</em>
+          </p>
+          <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20%C2%AB%20Logiciel%20centre%20de%20formation%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
-      </article>
-      <article class="sol-card sol-card-custom">
-        <div class="sol-body">
-          <span class="sol-tag">Sur mesure</span>
-          <h3>Votre métier n'est pas dans la liste ?</h3>
-          <p>Pharmacie, restaurant, hôtel, ONG, transport… Racontez-nous comment vous travaillez : nous construisons l'outil qui vous ressemble.</p>
-          <div class="sol-foot"><a href="#contact">Parlons de votre besoin →</a></div>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -1378,10 +1387,6 @@ function initSvcCarousels(){
   });
 }
 initSvcCarousels();
-setInterval(()=>{document.querySelectorAll('.sol-media').forEach(m=>{
-  const imgs=[...m.querySelectorAll('.sol-img')];if(imgs.length<2)return;
-  const i=imgs.findIndex(x=>x.classList.contains('sol-on'));
-  imgs[i<0?0:i].classList.remove('sol-on');imgs[(i+1)%imgs.length].classList.add('sol-on');});},3500);
 
 // ==== FAQ TOGGLE ====
 function toggleFaq(el){
