@@ -591,7 +591,7 @@ select{
 .sol-header h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 1rem;}
 .sol-header p{color:rgba(255,255,255,.68);}
 .sol-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;
-  background:linear-gradient(135deg,rgba(255,102,0,.16),rgba(255,102,0,.03));
+  background:linear-gradient(100deg,rgba(13,13,22,.97) 35%,rgba(13,13,22,.82)),linear-gradient(135deg,rgba(255,102,0,.16),rgba(255,102,0,.03)),url('images/solutions/boutique.jpg') center/cover;
   border:1px solid rgba(255,102,0,.35);border-radius:20px;padding:2.5rem;margin-bottom:2rem;}
 .sol-flag{display:inline-block;background:var(--accent);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem;}
 .sol-featured h3{font-size:1.6rem;font-weight:800;margin-bottom:.6rem;}
@@ -622,7 +622,18 @@ select{
 .mock-rows div span:last-child{text-align:right;}
 .mock-rows .tot{border-bottom:none;font-weight:800;color:var(--accent-dark);}
 .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
-.sol-card{display:flex;flex-direction:column;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.6rem;transition:all .3s;}
+.sol-card{display:flex;flex-direction:column;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:all .3s;}
+.sol-body{display:flex;flex-direction:column;flex:1;padding:1.4rem 1.6rem 1.6rem;}
+.sol-media{position:relative;height:190px;overflow:hidden;
+  background:radial-gradient(circle at 75% 30%,rgba(255,102,0,.55),transparent 60%),linear-gradient(135deg,#2a1608,#14141f);}
+.sol-media::before{content:attr(data-icon);position:absolute;right:-10px;top:-18px;font-size:9rem;opacity:.18;line-height:1;}
+.sol-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s,transform .6s;}
+.sol-img.sol-on{opacity:1;}
+.sol-card:hover .sol-img{transform:scale(1.06);}
+.sol-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,18,.92) 0%,rgba(10,10,18,.15) 60%,transparent);z-index:1;}
+.sol-media-cap{position:absolute;left:1.2rem;right:1.2rem;bottom:1rem;z-index:2;display:flex;align-items:center;gap:.7rem;}
+.sol-media-cap .sol-icon{width:44px;height:44px;font-size:1.35rem;background:var(--accent);}
+.sol-media-cap .sol-tag{color:#fff;}
 .sol-card:hover{border-color:rgba(255,102,0,.6);transform:translateY(-6px);background:rgba(255,255,255,.07);}
 .sol-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
 .sol-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:rgba(255,102,0,.15);}
@@ -1057,10 +1068,12 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
     </article>
     <div class="sol-grid">
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">⚖️</span>
-          <span class="sol-tag">Cabinet d'huissier</span>
+        <div class="sol-media" data-icon="⚖️">
+          <img loading="lazy" src="images/solutions/huissier-1.jpg" class="sol-img sol-on" alt="Gestion de cabinet d'huissier" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/huissier-2.jpg" class="sol-img" alt="Gestion de cabinet d'huissier" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">⚖️</span><span class="sol-tag">Cabinet d'huissier</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion de cabinet d'huissier</h3>
         <p class="sol-pb">Vos dossiers, actes et délais sont éparpillés entre classeurs et fichiers Excel ?</p>
         <ul class="sol-feats"><li>Dossiers et actes centralisés</li><li>Suivi des significations et procédures</li><li>Échéancier des audiences et délais</li><li>Clients, débiteurs et recouvrements</li><li>Facturation et encaissements</li></ul>
@@ -1068,12 +1081,15 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20cabinet%20d%27huissier%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
+        </div>
       </article>
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">🏠</span>
-          <span class="sol-tag">Agence immobilière</span>
+        <div class="sol-media" data-icon="🏠">
+          <img loading="lazy" src="images/solutions/immobilier-1.jpg" class="sol-img sol-on" alt="Gestion d'agence immobilière" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/immobilier-2.jpg" class="sol-img" alt="Gestion d'agence immobilière" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏠</span><span class="sol-tag">Agence immobilière</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion d'agence immobilière</h3>
         <p class="sol-pb">Difficile de suivre les loyers, les impayés et les contrats de chaque bien ?</p>
         <ul class="sol-feats"><li>Biens à louer ou à vendre</li><li>Propriétaires et locataires</li><li>Suivi des loyers et des impayés</li><li>Contrats et quittances</li><li>Calcul des commissions</li></ul>
@@ -1081,12 +1097,15 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27agence%20immobili%C3%A8re%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
+        </div>
       </article>
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">🏥</span>
-          <span class="sol-tag">Clinique</span>
+        <div class="sol-media" data-icon="🏥">
+          <img loading="lazy" src="images/solutions/clinique-1.jpg" class="sol-img sol-on" alt="Gestion de clinique" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/clinique-2.jpg" class="sol-img" alt="Gestion de clinique" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🏥</span><span class="sol-tag">Clinique</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion de clinique</h3>
         <p class="sol-pb">Fiches patients papier, files d'attente, caisse difficile à contrôler ?</p>
         <ul class="sol-feats"><li>Dossiers patients</li><li>Rendez-vous et consultations</li><li>Ordonnances</li><li>Facturation et caisse</li><li>Pharmacie et stock de médicaments</li></ul>
@@ -1094,12 +1113,15 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20clinique%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
+        </div>
       </article>
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">🍾</span>
-          <span class="sol-tag">Dépôt de boissons</span>
+        <div class="sol-media" data-icon="🍾">
+          <img loading="lazy" src="images/solutions/boissons-1.jpg" class="sol-img sol-on" alt="Gestion de dépôt de boissons" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/boissons-2.jpg" class="sol-img" alt="Gestion de dépôt de boissons" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🍾</span><span class="sol-tag">Dépôt de boissons</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion de dépôt de boissons</h3>
         <p class="sol-pb">Casiers, emballages consignés et crédits clients qui ne tombent jamais juste ?</p>
         <ul class="sol-feats"><li>Stock par casier ou bouteille</li><li>Emballages consignés</li><li>Ventes en gros et au détail</li><li>Crédits clients</li><li>Approvisionnements fournisseurs</li></ul>
@@ -1107,12 +1129,15 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
+        </div>
       </article>
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">🎓</span>
-          <span class="sol-tag">École</span>
+        <div class="sol-media" data-icon="🎓">
+          <img loading="lazy" src="images/solutions/ecole-1.jpg" class="sol-img sol-on" alt="Gestion d'établissement scolaire" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/ecole-2.jpg" class="sol-img" alt="Gestion d'établissement scolaire" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🎓</span><span class="sol-tag">École</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion d'établissement scolaire</h3>
         <p class="sol-pb">Inscriptions, scolarités et bulletins qui prennent des semaines à préparer ?</p>
         <ul class="sol-feats"><li>Inscriptions des élèves</li><li>Scolarité et paiements</li><li>Notes et bulletins</li><li>Emplois du temps</li><li>Suivi des absences</li></ul>
@@ -1120,18 +1145,22 @@ Offrez bien plus qu'une simple horloge — offrez un souvenir unique. .<br>
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27%C3%A9tablissement%20scolaire%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
         </div>
+        </div>
       </article>
       <article class="sol-card">
-        <div class="sol-head">
-          <span class="sol-icon" aria-hidden="true">📚</span>
-          <span class="sol-tag">Centre de formation</span>
+        <div class="sol-media" data-icon="📚">
+          <img loading="lazy" src="images/solutions/formation-1.jpg" class="sol-img sol-on" alt="Gestion de centre de formation" onerror="this.remove()">
+          <img loading="lazy" src="images/solutions/formation-2.jpg" class="sol-img" alt="Gestion de centre de formation" onerror="this.remove()">
+          <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">📚</span><span class="sol-tag">Centre de formation</span></div>
         </div>
+        <div class="sol-body">
         <h3>Gestion de centre de formation</h3>
         <p class="sol-pb">Apprenants, sessions et paiements par tranches difficiles à suivre ?</p>
         <ul class="sol-feats"><li>Apprenants et sessions</li><li>Paiements par tranches</li><li>Feuilles de présence</li><li>Attestations et certificats</li><li>Tableau de bord du directeur</li></ul>
         <div class="sol-foot">
           <span class="sol-price">Sur devis</span>
           <a class="sol-btn" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20centre%20de%20formation%20%C2%BB." target="_blank" rel="noopener noreferrer">Demander une démo</a>
+        </div>
         </div>
       </article>
     </div>
@@ -1441,6 +1470,10 @@ function initSvcCarousels(){
   });
 }
 initSvcCarousels();
+setInterval(()=>{document.querySelectorAll('.sol-media').forEach(m=>{
+  const imgs=[...m.querySelectorAll('.sol-img')];if(imgs.length<2)return;
+  const i=imgs.findIndex(x=>x.classList.contains('sol-on'));
+  imgs[i<0?0:i].classList.remove('sol-on');imgs[(i+1)%imgs.length].classList.add('sol-on');});},3500);
 
 // ==== FAQ TOGGLE ====
 function toggleFaq(el){
