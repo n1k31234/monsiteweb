@@ -587,6 +587,19 @@ select{
 }
 
 
+/* LOGICIELS DANS LE CATALOGUE */
+.svc-subtitle{grid-column:1/-1;text-align:left;font-weight:800;font-size:1.05rem;color:#fff;
+  padding:.6rem 0 .2rem;border-bottom:2px solid var(--blue);margin-bottom:.2rem;}
+.svc-subtitle:not(:first-child){margin-top:1.2rem;}
+.svc-ribbon{position:absolute;top:10px;left:10px;z-index:2;background:var(--blue);color:#fff;
+  padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;}
+.svc-card-phare{outline:3px solid var(--orange);}
+.svc-card .svc-price{z-index:2;}
+.svc-thermal{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;background:rgba(15,33,51,.88);color:#fff;
+  padding:6px 10px;border-radius:8px;font-size:.78rem;font-weight:700;text-align:center;border-left:4px solid var(--orange);}
+.svc-sub{display:block;font-size:.8rem;font-weight:600;color:var(--blue-dark);margin:-.2rem 0 .5rem;}
+.svc-hl{display:block;background:#fff4e2;border-left:4px solid var(--orange);color:#7a4300;padding:.45rem .6rem;border-radius:6px;margin:.4rem 0;font-size:.82rem;}
+.acc-item.open .acc-panel{max-height:20000px;}
 /* SOLUTIONS LOGICIELLES — couleurs du logo (bleu #04A1DF, orange #F5960B) */
 #solutions{background:linear-gradient(180deg,#f2f9fd 0%,#ffffff 100%);color:#0f2133;padding:6rem 5%;}
 .sol-inner{max-width:1140px;margin:0 auto;}
@@ -761,13 +774,13 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
       <div class="sol-featured-txt">
         <span class="sol-flag">⭐ Produit phare</span>
         <h3>🛒 ITSC Gestion</h3>
-        <span class="sol-sub">Logiciel de gestion de boutique &amp; commerce</span>
+        <span class="sol-sub">Pour petites boutiques, supermarchés, grandes surfaces &amp; quincailleries</span>
         <p class="sol-pb">Vous ne savez jamais exactement ce qui reste en stock ni ce que la caisse a encaissé ? ITSC Gestion vous donne la réponse en un clic.</p>
         <div class="sol-hl"><span style="font-size:1.6rem">🖨️</span><span><strong>Imprimante thermique Xprinter XP-T80A</strong>Tickets de caisse imprimés sur papier 80 mm, directement depuis le logiciel.</span></div>
         <ul class="sol-feats sol-feats-2">
           <li>Caisse rapide, ventes en quelques clics</li>
           <li>Stock et alertes de rupture</li>
-          <li>Tableau de bord des ventes</li>
+          <li>Multi-caisses &amp; gros volumes (supermarchés)</li>
           <li>Accès du gérant depuis son PC (réseau Wi-Fi local)</li>
         </ul>
         <div class="sol-badges">
@@ -775,7 +788,7 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
         </div>
         <div class="sol-cta-row">
           <a class="sol-btn sol-btn-lg" href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20ITSC%20Gestion%20%C2%BB." target="_blank" rel="noopener noreferrer">Essayer gratuitement 21 jours</a>
-          <span class="sol-note">Idéal pour : boutiques, supérettes, quincailleries, pharmacies, magasins.</span>
+          <span class="sol-note">Idéal pour : petites boutiques, supérettes, supermarchés, grandes surfaces, quincailleries, pharmacies, magasins.</span>
         </div>
       </div>
       <div class="sol-featured-vis">
@@ -844,6 +857,7 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
       <article class="sol-card">
         <div class="sol-media" data-icon="🍾">
           <img loading="lazy" src="https://images.pexels.com/photos/17364034/pexels-photo-17364034.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="sol-img sol-on" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <img loading="lazy" src="https://images.pexels.com/photos/5881421/pexels-photo-5881421.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="sol-img" alt="Gestion de dépôt de boissons" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
           <div class="sol-media-cap"><span class="sol-icon" aria-hidden="true">🍾</span><span class="sol-tag">Dépôt de boissons</span></div>
         </div>
         <div class="sol-body">
@@ -910,11 +924,180 @@ qu'il s'agisse de services technologiques ou de créations sur mesure.
       <!-- ═══ DÉVELOPPEMENT WEB & APPLICATION ═══ -->
       <div class="acc-item">
         <button class="acc-btn" onclick="toggleAcc(this)">
-          <span><span style="font-size:1.4rem;margin-right:.7rem;">💻</span>Développement web &amp; Application</span>
+          <span><span style="font-size:1.4rem;margin-right:.7rem;">💻</span>Logiciels de gestion, sites web &amp; applications</span>
           <span class="acc-arrow">▼</span>
         </button>
         <div class="acc-panel">
           <div class="svc-grid">
+            <div class="svc-subtitle">🧩 Nos logiciels de gestion — produits phares</div>
+
+            <!-- Logiciel : ITSC Gestion (boutique & commerce) -->
+            <div class="svc-card svc-card-phare">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/30020992/pexels-photo-30020992.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="ITSC Gestion — caisse et imprimante thermique Xprinter XP-T80A 80 mm">
+                <img loading="lazy" src="https://images.pexels.com/photos/3570235/pexels-photo-3570235.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="ITSC Gestion — caisse et imprimante thermique Xprinter XP-T80A 80 mm">
+                <img loading="lazy" src="https://images.pexels.com/photos/9755391/pexels-photo-9755391.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="ITSC Gestion — caisse et imprimante thermique Xprinter XP-T80A 80 mm">
+                <img loading="lazy" src="https://images.pexels.com/photos/30688912/pexels-photo-30688912.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="ITSC Gestion — supermarché">
+                <span class="svc-ribbon">⭐ Produit phare</span>
+                <span class="svc-price">Essai gratuit 21 jours</span>
+                <span class="svc-thermal">🧾 Imprimante Xprinter XP-T80A · 80 mm</span>
+              </div>
+              <div class="svc-body">
+                <h4>🛒 ITSC Gestion</h4>
+                <span class="svc-sub">Boutiques, supermarchés &amp; quincailleries</span>
+                <p style="color:#333;text-align:left;">De la petite boutique au supermarché : sachez à tout moment ce qui reste en stock et ce que la caisse a encaissé.<br>
+                  <strong class="svc-hl">🖨️ Compatible imprimante thermique Xprinter XP-T80A : tickets de caisse sur papier 80 mm</strong><br>
+                  ✅ Caisse rapide, ventes en quelques clics<br>
+                  ✅ Stock et alertes de rupture<br>
+                  ✅ 100 % hors ligne — PC &amp; Android<br>
+                  ✅ Accès du gérant depuis son PC (Wi-Fi)<br>
+                  <em>Idéal pour : petites boutiques, supérettes, supermarchés, grandes surfaces, quincailleries, pharmacies.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20ITSC%20Gestion%20%C2%BB%20%28gestion%20de%20boutique%29." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de cabinet d'huissier -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/7875843/pexels-photo-7875843.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de cabinet d'huissier">
+                <img loading="lazy" src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de cabinet d'huissier">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>⚖️ Gestion de cabinet d'huissier</h4>
+                <p style="color:#333;text-align:left;">Fini les dossiers éparpillés entre classeurs et fichiers Excel.<br>
+                  ✅ Dossiers et actes centralisés<br>
+                  ✅ Suivi des significations et procédures<br>
+                  ✅ Échéancier des audiences et délais<br>
+                  ✅ Facturation et recouvrements<br>
+                  <em>Idéal pour : huissiers de justice, commissaires de justice.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20cabinet%20d%27huissier%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion d'agence immobilière -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/33052786/pexels-photo-33052786.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion d'agence immobilière">
+                <img loading="lazy" src="https://images.pexels.com/photos/31015267/pexels-photo-31015267.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion d'agence immobilière">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🏠 Gestion d'agence immobilière</h4>
+                <p style="color:#333;text-align:left;">Suivez chaque bien, chaque locataire et chaque loyer sans effort.<br>
+                  ✅ Biens à louer ou à vendre<br>
+                  ✅ Propriétaires et locataires<br>
+                  ✅ Loyers, impayés et quittances<br>
+                  ✅ Contrats et commissions<br>
+                  <em>Idéal pour : agences immobilières, gestionnaires de biens.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27agence%20immobili%C3%A8re%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de clinique -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de clinique">
+                <img loading="lazy" src="https://images.pexels.com/photos/6097758/pexels-photo-6097758.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de clinique">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🏥 Gestion de clinique</h4>
+                <p style="color:#333;text-align:left;">Un accueil plus fluide et une caisse enfin maîtrisée.<br>
+                  ✅ Dossiers patients<br>
+                  ✅ Rendez-vous et consultations<br>
+                  ✅ Ordonnances<br>
+                  ✅ Facturation, caisse et pharmacie<br>
+                  <em>Idéal pour : cliniques, cabinets médicaux, centres de santé.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20clinique%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de dépôt de boissons -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/17364034/pexels-photo-17364034.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de dépôt de boissons">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🍾 Gestion de dépôt de boissons</h4>
+                <p style="color:#333;text-align:left;">Casiers, emballages et crédits clients qui tombent enfin juste.<br>
+                  ✅ Stock par casier ou bouteille<br>
+                  ✅ Emballages consignés<br>
+                  ✅ Ventes en gros et au détail<br>
+                  ✅ Crédits clients et fournisseurs<br>
+                  <em>Idéal pour : dépôts de boissons, grossistes, distributeurs.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20d%C3%A9p%C3%B4t%20de%20boissons%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion d'établissement scolaire -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/31820972/pexels-photo-31820972.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion d'établissement scolaire">
+                <img loading="lazy" src="https://images.pexels.com/photos/5905919/pexels-photo-5905919.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion d'établissement scolaire">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>🎓 Gestion d'établissement scolaire</h4>
+                <p style="color:#333;text-align:left;">Inscriptions, scolarités et bulletins prêts en quelques clics.<br>
+                  ✅ Inscriptions des élèves<br>
+                  ✅ Scolarité et paiements<br>
+                  ✅ Notes et bulletins<br>
+                  ✅ Emplois du temps et absences<br>
+                  <em>Idéal pour : écoles primaires, collèges, lycées.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20d%27%C3%A9tablissement%20scolaire%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <!-- Logiciel : Gestion de centre de formation -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="https://images.pexels.com/photos/5940713/pexels-photo-5940713.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img svc-active" alt="Gestion de centre de formation">
+                <img loading="lazy" src="https://images.pexels.com/photos/5905751/pexels-photo-5905751.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" class="svc-img" alt="Gestion de centre de formation">
+                <span class="svc-price">Sur devis</span>
+              </div>
+              <div class="svc-body">
+                <h4>📚 Gestion de centre de formation</h4>
+                <p style="color:#333;text-align:left;">Apprenants, sessions et paiements par tranches sous contrôle.<br>
+                  ✅ Apprenants et sessions<br>
+                  ✅ Paiements par tranches<br>
+                  ✅ Feuilles de présence<br>
+                  ✅ Attestations et certificats<br>
+                  <em>Idéal pour : centres de formation, instituts, écoles professionnelles.</em>
+                </p>
+                <a href="https://wa.me/22891493493?text=Bonjour%20IT%20SERVICES%20%26%20CREATIVE%2C%20je%20souhaite%20une%20d%C3%A9mo%20du%20logiciel%20%C2%AB%20Gestion%20de%20centre%20de%20formation%20%C2%BB." class="svc-btn" target="_blank" rel="noopener noreferrer">Demander une démo</a>
+              </div>
+            </div>
+
+            <div class="svc-subtitle">🌐 Sites web &amp; applications sur mesure</div>
+
+            <!-- Carte 1 : Site Vitrine -->
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img loading="lazy" src="images/services/services-informatiqu-1.jpg" class="svc-img svc-active" alt="Site Vitrine">
+                <img loading="lazy" src="images/services/services-informatiqu-2.jpg" class="svc-img" alt="Site Vitrine">
+                <span class="svc-price">À partir de 115 000 FCFA</span>
+              </div>
+              <div class="svc-body">
+                <h4>🌐 Site Vitrine</h4>
+                <p style="color:#333;text-align:left;">Présentez votre entreprise sur Internet avec élégance.<br>
+                  ✔️ Présentation de votre activité<br>
+                  ✔️ Galerie photos<br>
+                  ✔️ Formulaire de contact<br>
+                  ✔️ Intégration WhatsApp<br>
+                  ✔️ Version mobile responsive<br>
+                  <em>Idéal pour : commerçants, artisans, PME.</em>
+                </p>
+                <a href="#contact" class="svc-btn">En savoir plus</a>
+              </div>
+            </div>
 
             <!-- Carte 2 : Site de Réservation -->
             <div class="svc-card">
